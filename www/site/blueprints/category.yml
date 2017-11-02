@@ -1,0 +1,28 @@
+title: Rubrique
+
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: true
+
+icon: list-alt
+
+pages:
+  template:
+    - article
+    - grid
+
+files: false
+
+fields:
+  title:
+    label: Titre
+    type:  text
+
+  description:
+    label: Description
+    type: textarea
+    placeholder: Une description de cette rubrique pour la sidebar.
+    buttons: false

@@ -1,0 +1,13 @@
+Title: Erreur
+
+----
+
+Text: 
+
+# La page demandée est introuvable.
+
+[Revenir à l'accueil](/).
+
+----
+
+Sidebar: 

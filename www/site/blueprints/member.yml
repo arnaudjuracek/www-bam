@@ -1,0 +1,47 @@
+title: Membre
+icon: user-o
+
+options:
+  preview: true
+  status: true
+  template: true
+  url: true
+  delete: true
+
+pages: false
+files:
+  fields:
+    focus:
+      label: Point de focus
+      type: focus
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+    width: 1/2
+
+  role:
+    label: Rôles
+    icon: user
+    width: 1/2
+    type:  tags
+    index: siblings
+
+  job:
+    label: Métier
+    icon: user
+    width: 1/2
+    type:  tags
+    index: siblings
+
+  cover:
+    label: Photo de profil
+    type: image
+    width: 1/2
+
+  metas: metas
+  text: markdown

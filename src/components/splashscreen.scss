@@ -1,0 +1,105 @@
+$timeline: (
+  icons: (0, 600),
+  link: (0, 300),
+  baseline: (600, 900),
+  footer: (900, 300)
+);
+
+@function delay ($key) { @return nth(map-get($timeline, $key), 1); }
+@function duration ($key) { @return nth(map-get($timeline, $key), 2); }
+
+.splashscreen {
+  .menu {
+    left: 0;
+    right: 0;
+    @media (min-width: breakpoint(tablet)) { padding-left: 0; }
+    .links {
+      margin: 0 auto;
+      line-height: 0;
+      .link {
+        opacity: 0;
+        margin-bottom: 3rem;
+
+        &:hover { @include applyTheme(svg, stroke); }
+        .link-icon {
+          margin: 0 auto;
+          padding-bottom: 2rem;
+          line-height: 0;
+
+          width: 4rem;
+          stroke-width: 0.5rem;
+          svg { @include easing(300ms, stroke); }
+        }
+      }
+
+      @for $i from 0 through 20 {
+        .link:nth-of-type(#{$i}) {
+          animation: fallIn #{duration(icons)}ms ease forwards;
+          animation-delay: #{$i * 100}ms;
+
+          .link-icon {
+            stroke-dasharray: 0 1000;
+            animation: dash #{duration(icons)}ms ease-in forwards;
+            animation-delay: #{delay(icons) + $i * 100}ms;
+          }
+        }
+      }
+    }
+  }
+
+  .splashscreen-logo {
+    $size: 10vmax;
+
+    // animation: fallIn 1000ms ease forwards;
+    // animation-delay: 0;
+
+    position: fixed;
+    top: calc(45% - #{$size / 2});
+    left: calc(50% - #{$size / 2});
+
+    width: $size;
+    height: auto;
+
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .splashscreen-baseline {
+    opacity: 0;
+
+    animation: fallIn #{duration(baseline)}ms ease forwards;
+    animation-delay: #{delay(baseline)}ms;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 20%;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  footer.splashscreen-footer {
+    position: absolute;
+    left: 50%;
+    bottom: 7rem;
+    transform: translateX(-50%);
+    width: 20rem;
+
+    li { opacity: 0; }
+
+    @for $i from 0 through 20 {
+      li:nth-of-type(#{$i}) {
+        animation: fallIn #{duration(footer)}ms ease forwards;
+        animation-delay: #{delay(footer) + $i * 100}ms;
+      }
+    }
+  }
+}

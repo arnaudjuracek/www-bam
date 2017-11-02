@@ -1,0 +1,40 @@
+.toc {
+  margin-bottom: 0.5rem;
+
+  li {
+    padding-right: 1rem;
+    // Using padding instead of margin keep the bounding box
+    padding-bottom: 2px;
+  }
+
+  .linkbox {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.toc {
+  @mixin active-state () {
+    transform: translateX(2rem);
+  }
+  @mixin reset-state () {
+    transform: translateX(0);
+  }
+
+  a {
+    @include easing(300ms);
+    &.is-active {
+      @include active-state();
+    }
+  }
+
+  &:hover {
+    // Set all to active state
+    a { @include active-state(); }
+
+    // Reset all state after :hover
+    li:hover ~ li:not(:empty) {
+      a { @include reset-state(); }
+    }
+  }
+}

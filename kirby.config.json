@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "core": "https://github.com/getkirby/kirby.git",
+    "panel": "https://github.com/getkirby/panel.git",
+    "fields": {
+      "markdown": "https://github.com/JonasDoebertin/kirby-visual-markdown.git",
+      "previewfiles": "https://github.com/brocessing/kirby-previewfiles.git"
+    },
+    "plugins": {
+      "focus": "https://github.com/flokosiol/kirby-focus.git",
+      "footnotes": "https://github.com/distantnative/footnotes.git"
+    },
+    "tags": {},
+    "widgets": {
+      "kirby-backup-widget": "https://github.com/arnaudjuracek/kirby-backup-widget.git"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Crimson+Text:400,400i,700,700i');
+@import 'sass/reset';
+
+$colors: (
+  background: #F4F5F4,
+  text: #2E2A26
+);
+
+// these keys are top-pages' UID
+$brand-colors: (
+  collectif-bam: (#FF4825, #D14627),
+  ecosysteme: (#FFC53D, #ECA918),
+  produits: (#D40058, #960148),
+  contact: (#8A8A8D, #646569),
+  projets: (#0083C7, #006BA4),
+  evenements: (#00A787, #009478),
+  expertise: (#FF6B00, #BB4709)
+);
+
+$breakpoints: (
+  desktop: 1500px,
+  tablet: 1024px,
+  phone: 600px
+);
+
+@keyframes fadeIn {
+  from {transform: translateX(-1rem); opacity: 0; }
+  to {transform: none; opacity: 1; }
+}
+
+@keyframes fallIn {
+  from { transform: translateY(-1rem); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+    stroke-dasharray: 0 300;
+  }
+  40% { opacity: 1; }
+  to { stroke-dasharray: 300 0; }
+}
+
+@import 'sass/misc';
+@import 'sass/base';
+@import 'components/footnotes';
+@import 'sass/layout';
+@import 'components/metas';
+@import 'components/grid';
+@import 'components/splashscreen';
+@import 'components/menu';
+@import 'components/sidebar';
+@import 'components/social-links';
+@import 'components/linkbox';
+@import 'components/toc';
+@import 'components/preview.member';
+@import 'components/preview.partner';
+@import 'components/preview.product';
+@import 'components/preview.project';

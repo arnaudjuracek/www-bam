@@ -1,0 +1,150 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Assistant', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2rem;
+  line-height: 1.6em;
+
+  color: color(text);
+  background: color(background);
+}
+
+::selection {
+  color: color(background);
+  @include themable(background);
+}
+
+figure {
+  line-height: 0;
+  width: 100%;
+  &.is-forced-ratio {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  &.lazyload {
+    background: white;
+    img {
+      opacity: 0;
+      &.is-loaded {
+        @include easing(600ms, opacity);
+        opacity: 1;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+main {
+  a {
+    @include themable(color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    @include easing(300ms, border-color);
+    &:hover { border-color: inherit; }
+  }
+
+  h1 {
+    font-size: 3rem;
+    @include emdash(1em, 2rem);
+  }
+}
+
+
+article {
+  animation: fadeIn ease-out 1;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+
+  color: color(text);
+
+  header {
+    .article-abstract {
+      p, ul, ol {
+        font-family: 'Assistant', sans-serif;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin: 3em 0 1em;
+  }
+
+  h3, h4, h5, h6 {
+    font-size: 1.8rem;
+  }
+
+  figure {
+    margin-bottom: 1em;
+    img {
+      $frame-width: 1rem;
+      outline: $frame-width solid white;
+      outline-offset: -$frame-width;
+    }
+  }
+
+  p, ul, ol, blockquote {
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  blockquote {
+    p {
+      font-size: 2.3rem;
+      line-height: 1.3em;
+      font-style: italic;
+    }
+  }
+
+  li > ul, li > ol { margin-bottom: 0; }
+
+  ul {
+    padding-left: 1.1em;
+    list-style: square outside;
+  }
+
+  ol {
+    list-style: decimal inside;
+  }
+
+  sup { font-size: small; }
+  sup.footnote a { border: none; }
+
+  .anchor {
+    display: block;
+    position: relative;
+    top: -16rem;
+    visibility: hidden;
+  }
+}
+
+article.article-member {
+  header {
+    margin-bottom: 2rem;
+    figure {
+      width: calc(50% - 4rem);
+      height: auto;
+    }
+  }
+}

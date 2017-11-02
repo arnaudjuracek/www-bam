@@ -1,0 +1,42 @@
+.footnotes {
+  font-size: 1.4rem;
+  line-height: 1.4em;
+
+  color: lighten(color(text), 30%);
+
+  li {
+    &.is-loading {
+      opacity: 0;
+      transform: translateX(-1rem);
+    }
+
+    &.is-loaded {
+      @include easing(300ms);
+      transition-property: opacity, transform;
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .footnotereverse a { border: none; }
+}
+
+// These mixins allow fine-control of this component via layout.scss
+
+@mixin footnotes-hide-backref () {
+  .footnotereverse { display: none; }
+}
+
+@mixin footnotes-show-number () {
+  li {
+    position: relative;
+    &::before {
+      @include themable(color);
+      content: attr(value);
+      position: absolute;
+      left: -1rem;
+      text-align: right;
+      transform: translateX(-100%);
+    }
+  }
+}

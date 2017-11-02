@@ -1,0 +1,22 @@
+title: Page
+
+options:
+  preview: true
+  status: true
+  template: true
+  url: true
+  delete: true
+
+icon: file-code-o
+
+pages: false
+files: false
+
+fields:
+  title:
+    label: Titre
+    type:  text
+
+  text:
+    label: Texte
+    extends: markdown

@@ -1,0 +1,23 @@
+.metas {
+  font-size: 1.4rem;
+  line-height: 1.4em;
+
+  a { font-weight: bold; }
+
+  .meta {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 0.125em;
+      left: 0;
+      fill: none;
+      stroke: lighten(color(text), 10%);
+      stroke-width: 1rem;
+
+      height: 1em;
+      width: auto;
+      transform: translateX(calc(-100% - 1ch));
+    }
+  }
+}

@@ -1,0 +1,24 @@
+title: Grille
+
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: true
+
+icon: folder-open-o
+
+pages:
+  template:
+    - member
+    - project
+    - partner
+    - product
+
+files: false
+
+fields:
+  title:
+    label: Titre
+    type:  text

@@ -1,0 +1,23 @@
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  .social-link {
+    display: block;
+    line-height: 0;
+    min-width: 1em;
+    height: 1em;
+    text-align: center;
+
+    stroke: color(text);
+    stroke-width: 0.8rem;
+
+    svg {
+      padding: 1px;
+      fill: none;
+      height: 100%;
+      width: auto;
+    }
+  }
+}

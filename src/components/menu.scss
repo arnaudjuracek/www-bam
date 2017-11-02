@@ -1,0 +1,37 @@
+.menu {
+  border-top: 5rem solid color(background);
+  background: ease-in-out-sine-gradient(color(background), transparent);
+
+  padding-bottom: 10rem;
+  pointer-events: none;
+
+  .links {
+    pointer-events: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .link {
+      &:not(:last-child) { margin-right: 2rem; }
+      @include applyTheme(a, color);
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.4rem;
+        @include easing(300ms, color);
+        &:not(:hover):not(.is-active) { color: color(text); }
+      }
+    }
+
+    .link-icon {
+      svg {
+        padding: 1px;
+        width: 100%;
+        height: auto;
+        fill: none;
+        stroke: color(text);
+      }
+    }
+  }
+}

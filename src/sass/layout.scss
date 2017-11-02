@@ -1,0 +1,104 @@
+body {}
+
+.medium-zoom-overlay { z-index: 3; }
+.medium-zoom-image { z-index: 4 !important; }
+
+aside.sidebar {
+  z-index: 2;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  width: 36rem;
+  @media (max-width: breakpoint(tablet)) {
+    @include easing(300ms, transform);
+    will-change: transform;
+    transform: translateX(calc(-100% + 1rem));
+
+    // Extend the hitbox to prevent weird :hover effect
+    left: 0rem;
+    border-left: 1rem solid color(background);
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+nav.menu {
+  z-index: 1;
+  position: fixed;
+
+  top: 0;
+  padding-top: calc(1rem - 0.5em);
+  left: 36rem;
+  padding-left: 5rem;
+  right: 17px;
+
+  .links {
+    width: 80ch;
+    max-width: calc(100vw - 36rem - 5rem - 5rem);
+  }
+
+  @media (max-width: breakpoint(tablet)) {
+    left: 0;
+    right: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    .links {
+      min-width: 100%;
+    }
+  }
+}
+
+main {
+  position: absolute;
+  top: calc(6rem + 5rem + 5rem - 2px);
+  left: 36rem + 5rem;
+  width: 80ch;
+  max-width: calc(100vw - 36rem - 5rem - 5rem);
+  padding-bottom: 5rem;
+
+  @media (max-width: breakpoint(tablet)) {
+    left: 0;
+    padding: 4rem;
+    min-width: 100%;
+  }
+
+  aside.outside {
+    position: relative;
+    width: 100%;
+
+    @include footnotes-show-number();
+
+    // Reset footnotes.js position when no need
+    @media (max-width: breakpoint(desktop)) {
+      .footnotes { margin-top: 8rem; }
+      li {
+        top: 0 !important;
+        position: relative !important;
+      }
+    }
+
+    @media (min-width: breakpoint(desktop)) {
+      @include footnotes-hide-backref();
+      $width: 20rem;
+      position: absolute;
+      top: 0;
+      right: calc(-#{$width} - 8rem);
+      width: $width;
+
+      .footnotes li { margin-top: 8rem; }
+
+      li:last-child {
+        padding-bottom: 5rem;
+      }
+    }
+  }
+
+  footer {
+    color: lighten(color(text), 30%);
+    padding: 6rem 0 1rem 0;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,107 @@
+.sidebar {
+  @include themable(background);
+
+  color: color(background);
+  padding: 6rem 8rem;
+
+  display: flex;
+  flex-direction: column;
+
+  header {
+    .sidebar-icon {
+      position: relative;
+      width: 5rem;
+      height: auto;
+      margin-bottom: 4rem;
+      line-height: 0;
+
+      svg {
+        width: 100%;
+        height: auto;
+        fill: none;
+        stroke: color(background);
+        stroke-width: 0.6rem;
+        * {
+          stroke-dasharray: 0 1000;
+          animation: dash 600ms ease-in forwards;
+          animation-delay: 100ms;
+        }
+      }
+
+      .sidebar-icon-back-arrow {
+        position: absolute;
+        height: 100%;
+        @include easing(300ms, transform);
+        transform: translateX(calc(-200% + 2px));
+        svg {
+          padding: 1px;
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      &:hover .sidebar-icon-back-arrow {
+        transform: translateX(calc(-225% + 2px));
+      }
+    }
+
+    .sidebar-title {
+      font-size: 2.8rem;
+      margin: 0;
+      text-transform: uppercase;
+      position: relative;
+      @include emdash(1em, 0);
+    }
+  }
+
+  .sidebar-abstract {
+    margin-top: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.2em;
+  }
+
+  .sidebar-metas {
+    padding-top: 2.8rem;
+    .sidebar-meta {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.2em;
+      &:not(:last-child) {
+        @include emdash(1.5em, 1.5em, 2.8rem);
+      }
+    }
+  }
+
+  .sidebar-scroll-wrapper {
+    flex: 1;
+    position: relative;
+    margin-bottom: 1rem;
+    overflow-x: hidden; // hide scrollbar
+
+    .sidebar-scroll-content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      padding-bottom: 2rem;
+      overflow-y: scroll;
+
+      // overflow scrollbar
+      box-sizing: content-box;
+      padding-right: 17px;
+    }
+  }
+
+  .internal-navigation-link:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    margin-top: 2rem;
+    .social-link svg {
+      stroke: color(background);
+    }
+  }
+}

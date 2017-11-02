@@ -1,0 +1,48 @@
+pages:
+  template:
+    - category
+    - default
+
+fields:
+  title:
+    label: Nom du site
+    type:  text
+
+  facebook:
+    label: Facebook
+    type: url
+    icon: facebook
+    width: 1/3
+    placeholder: https://facebook.com/account
+
+  twitter:
+    label: Twitter
+    type: url
+    icon: twitter
+    width: 1/3
+    placeholder: https://twitter.com/account
+
+  linkedin:
+    label: Linkedin
+    type: url
+    icon: linkedin
+    width: 1/3
+    placeholder: https://linkedin.com/in/account
+
+  description:
+    label: Description
+    type: textarea
+    icon: search
+    help: Ce texte est utilisé par les moteurs de recherche
+    buttons: false
+    validate:
+      maxLength: 160
+
+  keywords:
+    label: Mots-clefs
+    type: tags
+    help: Ces mots-clefs sont utilisés par les moteurs de recherche
+
+  footer:
+    extends: markdown
+    label: Pied de page

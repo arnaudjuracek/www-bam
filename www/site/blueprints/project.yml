@@ -1,0 +1,38 @@
+title: Projet
+icon: book
+
+options:
+  preview: true
+  status: true
+  template: true
+  url: true
+  delete: true
+
+pages:
+  build:
+    - title: Résumé
+      uid: resume
+      template: article
+      num: 1
+    - title: Historique
+      uid: historique
+      template: article
+      num: 2
+
+files: true
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+
+  cover:
+    label: Photo de couverture
+    type: image
+
+  description:
+    label: Description
+    extends: markdown

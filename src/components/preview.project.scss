@@ -1,0 +1,29 @@
+.preview-project {
+  $margin: 1rem;
+  display: inline-block;
+
+  @media (min-width: breakpoint(tablet)) { @include grid(3, $margin); }
+  @media (max-width: breakpoint(tablet)) { @include grid(2, $margin); }
+  @media (max-width: breakpoint(phone)) { @include grid(1, $margin); }
+
+  margin-right: $margin;
+  margin-bottom: $margin;
+
+  background: white;
+  filter: grayscale(1);
+  @include easing(300ms, filter);
+  &:hover { filter: none }
+
+  .preview-project-content {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+  }
+
+  .preview-project-cover {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

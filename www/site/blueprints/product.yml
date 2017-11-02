@@ -1,0 +1,36 @@
+title: Produit
+icon: book
+
+options:
+  preview: true
+  status: true
+  template: true
+  url: true
+  delete: true
+
+pages: false
+files:
+  fields:
+    focus:
+      label: Point de focus
+      type: focus
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+
+  link:
+    label: URL externe
+    type: url
+    width: 1/2
+
+  cover:
+    label: Photo de profil
+    type: image
+    width: 1/2
+
+  text: markdown

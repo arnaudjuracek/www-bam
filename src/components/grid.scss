@@ -1,0 +1,18 @@
+.grid-items {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  .grid-item-link {
+    display: inline-block;
+  }
+
+  @for $i from 0 through 20 {
+    .grid-item:nth-of-type(#{$i}) {
+      opacity: 0;
+      animation: fallIn 300ms ease forwards;
+      animation-delay: #{$i * 100}ms;
+    }
+  }
+}

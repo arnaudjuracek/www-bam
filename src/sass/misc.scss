@@ -1,0 +1,136 @@
+// -------------------------------------------------------------------------
+
+@function color ($key, $variant: 1) {
+  $merged: map-merge($colors, $brand-colors);
+  @if map-has-key($merged, $key) {
+    @return nth(map-get($merged, $key), $variant);
+  }
+}
+
+// -------------------------------------------------------------------------
+
+@function breakpoint ($key) {
+  @return map-get($breakpoints, $key);
+}
+
+// -------------------------------------------------------------------------
+
+@mixin themable ($properties...) {
+  @each $color-key, $color-value in $brand-colors {
+    // DEFAULT WHEN NO CATEGORY
+    body & {
+      @each $property in $properties {
+        #{$property}: black;
+      }
+    }
+
+    // DEFAULT WHEN NO DEPTH
+    body[data-category=#{$color-key}] & {
+      @each $property in $properties {
+        #{$property}: nth($color-value, 1);
+      }
+    }
+
+    @for $depth from 1 through 2 {
+      body[data-category=#{$color-key}][data-depth="#{$depth}"] & {
+        @each $property in $properties {
+          #{$property}: nth($color-value, $depth);
+        }
+      }
+    }
+  }
+}
+
+// -------------------------------------------------------------------------
+
+@mixin applyTheme ($selector, $properties...) {
+  @each $color-key, $color-value in $brand-colors {
+    // DEFAULT WHEN NO CATEGORY
+    & #{$selector} {
+      @each $property in $properties {
+        #{$property}: purple;
+      }
+    }
+
+    // DEFAULT WHEN NO DEPTH
+    &[data-category=#{$color-key}] #{$selector} {
+      @each $property in $properties {
+        #{$property}: nth($color-value, 1);
+      }
+    }
+
+    @for $depth from 1 through 2 {
+      &[data-category=#{$color-key}][data-depth="#{$depth}"] #{$selector} {
+        @each $property in $properties {
+          #{$property}: nth($color-value, $depth);
+        }
+      }
+    }
+  }
+}
+
+// -------------------------------------------------------------------------
+
+@mixin grid ($cols: 3, $margin: 1rem) {
+  width: calc(#{100% / $cols} - #{$margin - $margin / $cols});
+  &:nth-child(#{$cols}n) { margin-right: 0; }
+}
+
+// -------------------------------------------------------------------------
+
+@mixin debug ($color: red) {
+  outline: 1px solid $color;
+}
+
+// -------------------------------------------------------------------------
+
+@mixin easing ($duration: 100ms, $property: all){
+  transition: $property $duration cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+
+// -------------------------------------------------------------------------
+
+@mixin ratio ($ratio: 1) {
+  height: auto;
+  &::before {
+    content: '';
+    float: left;
+    padding-top: 100% / $ratio;
+  }
+}
+
+// -------------------------------------------------------------------------
+
+@mixin emdash ($dista: 0.5em, $distb: 0.5em, $width: 1em) {
+  position: relative;
+  padding-bottom: $dista;
+  margin-bottom: $distb;
+  &::after {
+    content: '';
+    color: inherit;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: $width;
+    border-bottom: 3px solid;
+  }
+}
+
+// -------------------------------------------------------------------------
+
+// this class prevents scroll bounce on osx
+html.no-bounce {
+  overflow: hidden;
+  height: 100%;
+  body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    overflow-x: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

@@ -1,0 +1,12 @@
+label: Article
+type:  markdown
+header1: h2
+header2: h3
+tools:
+  - header2
+  - bold
+  - italic
+  - unorderedList
+  - orderedList
+  - link
+  - image

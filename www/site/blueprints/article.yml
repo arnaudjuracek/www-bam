@@ -1,0 +1,29 @@
+title: Article
+
+icon: file-text-o
+
+options:
+  preview: true
+  status: true
+  template: true
+  url: true
+  delete: true
+
+pages: false
+files: true
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+
+  metas: metas
+
+  abstract:
+    label: Résumé
+    extends: markdown
+
+  text: markdown
