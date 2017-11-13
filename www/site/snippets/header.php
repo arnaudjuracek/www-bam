@@ -10,5 +10,5 @@
 
 <body
   data-category="<?php echo getTopLevelPage($page)->uid() ?>"
-  data-depth="<?php echo $page->depth() - 1 ?>"
+  data-depth="<?php echo min($page->depth() - 1, 2) ?>"
 >

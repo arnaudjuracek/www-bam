@@ -1,7 +1,5 @@
 <?php snippet('header') ?>
-<?php snippet('sidebar', [
-  'force' => $page
-]) ?>
+<?php snippet('sidebar') ?>
 <?php snippet('menu') ?>
 
 <main>

@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 <?php snippet('sidebar', [
-  'force' => $page,
+  'hijack_sidebar' => $page,
   'metas' => [
     $page->role() ? str_replace(',', '&nbsp;- ', $page->role()->value()) : '',
     $page->job() ? str_replace(',', '&nbsp;- ', $page->job()->value()) : '',

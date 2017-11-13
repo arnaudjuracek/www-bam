@@ -2,13 +2,13 @@
   // If a page is passed through the snippet, use it
   // else, use the topest page available
   $top = getTopLevelPage($page);
-  $p = isset($force) ? $force : $top;
+  $p = isset($hijack_sidebar) ? $hijack_sidebar : $top;
 ?>
 
 <aside class="sidebar">
   <header class="sidebar-header">
     <div class="sidebar-icon">
-      <?php if (isset($force)) : ?>
+      <?php if (isset($hijack_sidebar)) : ?>
         <a href="<?php echo $top->url() ?>">
           <span class="sidebar-icon-back-arrow">
             <?php snippet('icons/back-arrow') ?>
