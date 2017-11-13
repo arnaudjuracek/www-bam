@@ -32,6 +32,7 @@ fields:
   cover:
     label: Photo de couverture
     type: image
+    required: true
 
   description:
     label: Description

@@ -31,6 +31,7 @@ fields:
   cover:
     label: Photo de profil
     type: image
+    required: true
     width: 1/2
 
   text: markdown
