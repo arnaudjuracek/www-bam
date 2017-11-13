@@ -88,10 +88,11 @@ main {
       right: calc(-#{$width} - 8rem);
       width: $width;
 
-      .footnotes li { margin-top: 8rem; }
-
-      li:last-child {
-        padding-bottom: 5rem;
+      .footnotes li {
+        margin-top: 8rem;
+        &:last-child {
+          padding-bottom: 5rem;
+        }
       }
     }
   }

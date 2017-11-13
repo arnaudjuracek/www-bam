@@ -21,6 +21,14 @@
     ?>
   </article>
   <aside class="outside outside-footnotes">
+    <ul class="metas">
+      <?php foreach ($page->metas()->toStructure() as $meta): ?>
+        <li class="meta">
+          <?php snippet('icons/' . $meta->icon()) ?>
+          <?php echo $meta->value()->kirbytext() ?>
+        </li>
+      <?php endforeach ?>
+    </ul>
     <?php echo KirbyFootnotes::bibliography($page->text()) ?>
   </aside>
 
