@@ -27,9 +27,9 @@ c::set('routes', [
     }
   ],
   [ // Force project redirection to their first child
-    'pattern' => 'projets/projets/(:any)',
-    'action'  => function ($uid) {
-      $page = page('projets/projets/' . $uid);
+    'pattern' => 'projets/(:any)/(:any)',
+    'action'  => function ($folder, $uid) {
+      $page = page('projets/' . $folder . '/' . $uid);
       if (!$page) return go('erreur');
 
       $firstVisibleChild = $page->children()->visible()->first();
@@ -39,9 +39,9 @@ c::set('routes', [
     }
   ],
   [ // Hijack sidebar when inside a project
-    'pattern' => 'projets/projets/(:any)/(:all)',
-    'action'  => function ($uid, $sub) {
-      $project = page('projets/projets/' . $uid);
+    'pattern' => 'projets/(:any)/(:any)/(:all)',
+    'action'  => function ($folder, $uid, $sub) {
+      $project = page('projets/' . $folder . '/' . $uid);
       if (!$project) return go('erreur');
 
       $page = $project->find($sub);
