@@ -5,6 +5,7 @@ import Blazy from 'blazy'
 import Zoom from 'medium-zoom'
 import TocHighlighter from './components/toc'
 import Footnotes from './components/footnotes'
+import RemoteDescription from './components/remote-description'
 
 const blazy = new Blazy({
   selector: 'figure.lazyload img',
@@ -20,6 +21,11 @@ if (!MOBILE) {
   })
 
   Footnotes({ offy: -80 + 5 })
+
+  RemoteDescription({
+    selector: '.preview-project-infos',
+    container: 'aside.outside'
+  })
 
   Zoom(document.querySelectorAll('article img'), {
     background: '#FFF',

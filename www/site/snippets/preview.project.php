@@ -5,5 +5,9 @@
         <img src="<?php echo $cover->focusCrop(400)->url() ?>">
       <?php endif ?>
     </figure>
+    <aside class="preview-project-infos">
+      <h2 class="preview-project-info preview-project-info-title"><?php echo $page->title()->html() ?></h2>
+      <?php echo $page->description()->kt() ?>
+    </aside>
   </a>
 </li>

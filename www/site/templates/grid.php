@@ -3,9 +3,6 @@
 <?php snippet('menu') ?>
 
 <main>
-  <header>
-    <h1><?php echo $page->title()->html() ?></h1>
-  </header>
   <ul class="grid-items">
     <?php for ($i=0; $i < 10; $i++) : ?>
     <?php foreach ($page->children()->visible() as $item): ?>
@@ -13,6 +10,7 @@
     <?php endforeach ?>
     <?php endfor ?>
   </ul>
+  <aside class="outside"></aside>
 </main>
 
 <?php snippet('footer') ?>
