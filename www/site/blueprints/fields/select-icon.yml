@@ -3,5 +3,12 @@ type: select
 icon: smile-o
 default: architecture
 options:
-  www: www
-  mail: mail
+  board: tableau
+  briefcase: job
+  email: email
+  geo: adresse
+  people: personne
+  peoples: personnes
+  phone: téléphone
+  web: web
+

@@ -1,0 +1,29 @@
+title: Calendrier
+
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: true
+
+icon: calendar
+
+pages:
+  num: date
+  sort: date desc
+  template:
+    - event
+
+files: false
+
+fields:
+  title:
+    label: Titre
+    type:  text
+
+  description:
+    label: Description
+    type: textarea
+    placeholder: Une description de cette rubrique pour la sidebar.
+    buttons: false

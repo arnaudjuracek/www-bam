@@ -3,7 +3,8 @@
 
 $colors: (
   background: #F4F5F4,
-  text: #2E2A26
+  text: #2E2A26,
+  gray: lighten(#2E2A26, 30%),
 );
 
 // these keys are top-pages' UID
@@ -51,6 +52,7 @@ $breakpoints: (
 @import 'components/splashscreen';
 @import 'components/menu';
 @import 'components/sidebar';
+@import 'components/sidebar.filters';
 @import 'components/social-links';
 @import 'components/linkbox';
 @import 'components/toc';
@@ -59,3 +61,5 @@ $breakpoints: (
 @import 'components/preview.product';
 @import 'components/preview.project';
 @import 'components/remote-description';
+@import 'components/preview.event';
+@import 'components/contact';
