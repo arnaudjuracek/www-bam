@@ -1,6 +1,7 @@
 'use strict'
 
 import MOBILE from './js/is-mobile'
+import SmoothScroll from 'smooth-scroll'
 import Blazy from 'blazy'
 import Zoom from 'medium-zoom'
 import TocHighlighter from './components/toc'
@@ -12,6 +13,7 @@ const blazy = new Blazy({
   successClass: 'is-loaded'
 })
 
+
 if (!MOBILE) {
   TocHighlighter({
     anchorSelector: 'article .anchor',
@@ -19,6 +21,14 @@ if (!MOBILE) {
     className: 'is-active',
     offy: 100
   })
+
+
+  const scroll = new SmoothScroll('a[href*="#"]', {
+    ignore: '[data-scroll-ignore]',
+    speed: 300,
+    easing: 'easeInOutQuad'
+  })
+
 
   Footnotes({ offy: -80 + 5 })
 

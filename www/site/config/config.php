@@ -10,8 +10,7 @@ Kirby Configuration
 
 c::set([
   'widget.backup.include_site'     => true,
-  'plugin.footnotes.scroll'        => true,
-  'plugin.footnotes.scroll.offset' => -350,
+  'plugin.footnotes.scroll'        => false,
   'panel.kirbytext'                => false,
   'error'                          => 'erreur',
 
