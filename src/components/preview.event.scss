@@ -18,8 +18,7 @@
       position: relative;
       flex: none;
       width: 33.33%;
-      @include ratio(1);
-
+      @include ratio(4/3);
       border: 2px solid;
       @include themable(border-color);
 
@@ -31,19 +30,23 @@
         transform: translateY(-50%);
       }
 
+      .preview-event-date {
+        font-size: 2.8rem;
+        font-weight: bold;
+      }
+
       .preview-event-tag {
-        font-size: 2.6rem;
+        font-weight: bold;
         text-transform: uppercase;
       }
     }
 
     .preview-event-body {
       flex: 1;
-
       display: flex;
       flex-direction: column;
 
-      padding: 0 1rem;
+      padding: 1rem 2rem;
 
       color: color(text);
       font-weight: 700;
@@ -51,39 +54,33 @@
       line-height: 1.2em;
 
       header.preview-event-header {
+        .preview-event-title {
+          text-transform: uppercase;
+          font-size: 2.8rem;
+          margin-bottom: 1em;
+          line-height: 1.2em;
+        }
 
+        .preview-event-meta {
+          position: relative;
+          margin-bottom: 0.4em;
+          p { display: inline; }
+
+          &[data-label]::before {
+            display: none;
+            content: attr(data-label);
+            color: color(gray);
+            text-transform: lowercase;
+            font-variant: small-caps;
+          }
+        }
       }
 
       .preview-event-content {
         flex: 1;
-        border-top: 1px solid color(gray);
-
-        padding-top: 1rem;
         margin-top: 1rem;
-      }
-
-      .preview-event-title {
-        text-transform: uppercase;
-        margin-bottom: 1em;
-      }
-
-      .preview-event-meta {
-        position: relative;
-        margin-left: 2rem;
-        margin-bottom: 0.5em;
-        svg {
-          position: absolute;
-          top: 0.125em;
-          left: 0;
-          fill: none;
-          stroke: color(gray);
-          stroke-width: 1rem;
-
-          height: 1em;
-          width: auto;
-          padding: 1px;
-          transform: translateX(calc(-100% - 1ch));
-        }
+        font-weight: normal;
+        line-height: 1.4em;
       }
     }
   }
@@ -93,6 +90,42 @@
       opacity: 0.3;
       &:hover { opacity: 1; }
       @include easing(300ms, opacity);
+    }
+  }
+}
+
+
+@media (max-width: breakpoint(phone)) {
+  .preview-event {
+    .preview-event-container {
+      flex-direction: column;
+
+      .preview-event-cover {
+        border: none;
+        &::before { display: none; }
+        .preview-event-cover-content {
+          position: relative;
+          text-align: left;
+          transform: none;
+          line-height: 1.2em;
+          margin-bottom: 1em;
+
+          .preview-event-date {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+
+          .preview-event-tag {
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .preview-event-body{
+        padding: 0;
+      }
     }
   }
 }

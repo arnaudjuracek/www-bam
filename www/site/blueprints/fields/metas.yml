@@ -2,9 +2,14 @@ label: Méta-données
 type: structure
 modalsize: large
 style: table
+entry:
+  - value
+  - label
 fields:
-  icon:
-    extends: select-icon
+  label:
+    label: Label (optionnel)
+    type: text
+    icon: tag
   value:
     extends: markdown
     label: Méta-donnée

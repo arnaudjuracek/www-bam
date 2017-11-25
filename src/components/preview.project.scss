@@ -10,9 +10,17 @@
   margin-bottom: $margin;
 
   background: white;
-  filter: grayscale(1);
-  @include easing(300ms, filter);
-  &:hover { filter: none }
+
+  outline: 2px solid transparent;
+  @include easing(300ms, outline-color);
+  &:hover {
+    @include themable(outline-color);
+    .preview-project-cover {
+      img {
+        filter: none !important;
+      }
+    }
+  }
 
   .preview-project-content {
     width: 100%;
@@ -21,6 +29,8 @@
 
     .preview-project-cover {
       img {
+        @include easing(300ms, filter);
+        filter: grayscale(1);
         width: 100%;
         height: auto;
       }

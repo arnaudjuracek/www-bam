@@ -54,7 +54,7 @@ main {
   a {
     @include themable(color);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 0.07em solid transparent;
 
     @include easing(300ms, border-color);
     &:hover { border-color: inherit; }

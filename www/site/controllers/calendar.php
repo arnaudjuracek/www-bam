@@ -16,7 +16,7 @@
     foreach ($tags as $tag) {
       $filters[$tag] = [
         'url' => url_param(['archives' => str::slug($tag)], $page),
-        'isActive' => param('archives') == str::slug($tag)
+        'isActive' => param('archives') == str::slug($tag) || param('archives') == 'tout'
       ];
     }
 

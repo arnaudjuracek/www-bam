@@ -2,27 +2,29 @@
   <div class="preview-event-container">
     <div class="preview-event-cover">
       <div class="preview-event-cover-content">
-        <h2 class="preview-event-tag">
-          <?php if ($page->hasVisibleChildren()) : ?>
-            <a href="<?php echo $page->children()->visible()->first()->url() ?>">lien</a>
-          <?php endif ?>
-          <?php echo $page->tags()->html() ?>
-        </h2>
         <time class="preview-event-date" datetime="<?php echo $page->date('c') ?>">
           <?php echo $page->date('d/m/Y') ?>
         </time>
+        <div class="preview-event-tag">
+          <?php echo $page->tags()->html() ?>
+        </div>
       </div>
     </div>
     <section class="preview-event-body">
       <header class="preview-event-header">
-        <h3 class="preview-event-title preview-event-meta">
-          <?php echo $page->title()->html() ?>
-        </h3>
+        <h2 class="preview-event-title">
+          <?php if ($page->hasVisibleChildren()) : ?>
+            <a href="<?php echo $page->children()->visible()->first()->url() ?>">
+              <?php echo $page->title()->html() ?>
+            </a>
+          <?php else: ?>
+            <?php echo $page->title()->html() ?>
+          <?php endif ?>
+        </h2>
         <?php if ($page->metas()->isNotEmpty()) : ?>
           <ul class="preview-event-metas">
             <?php foreach ($page->metas()->toStructure() as $meta) : ?>
-              <li class="preview-event-meta">
-                <?php snippet('icons/' . $meta->icon()) ?>
+              <li class="preview-event-meta" <?php ecco($meta->label()->isNotEmpty(), 'data-label="' . $meta->label() . '"') ?>>
                 <?php echo $meta->value()->kirbytext() ?>
               </li>
             <?php endforeach ?>
