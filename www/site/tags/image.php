@@ -23,10 +23,11 @@ kirbytext::$tags['image'] = [
     $link    = $tag->attr('link');
     $caption = $tag->attr('caption');
     $file    = $tag->file($url);
-    $ratio   = $file->ratio();
-
     // use the file url if available and otherwise the given url
     $url = $file ? $file->url() : url($url);
+    if (!$file) return null;
+
+    $ratio   = $file->ratio();
     // alt is just an alternative for text
     if ($text = $tag->attr('text')) $alt = $text;
     // try to get the title from the image object and use it as alt text

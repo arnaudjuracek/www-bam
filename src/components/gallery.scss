@@ -1,0 +1,19 @@
+.gallery {
+  list-style: none;
+  line-height: 0;
+  padding: 0;
+
+  @media (min-width: breakpoint(phone)) {
+    column-count: 2;
+  }
+
+  .gallery-item {
+    &:not(:last-child) {margin-bottom: 2rem; }
+
+    .gallery-media {
+      display: inline-block;
+      margin: 0;
+
+    }
+  }
+}

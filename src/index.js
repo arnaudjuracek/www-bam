@@ -7,6 +7,7 @@ import Zoom from 'medium-zoom'
 import TocHighlighter from './components/toc'
 import Footnotes from './components/footnotes'
 import RemoteDescription from './components/remote-description'
+import Gallery from './components/gallery'
 
 const blazy = new Blazy({
   selector: 'figure.lazyload img',
@@ -29,6 +30,9 @@ if (!MOBILE) {
     easing: 'easeInOutQuad'
   })
 
+  Gallery({
+    class: 'gallery'
+  })
 
   Footnotes({ offy: -80 + 5 })
 
