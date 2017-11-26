@@ -1,6 +1,5 @@
-title: Article
-
-icon: file-text-o
+title: Job
+icon: coffee
 
 options:
   preview: true
@@ -24,8 +23,6 @@ fields:
     label: Titre
     type:  text
 
-  abstract:
-    label: Résumé
-    extends: markdown
+  metas: metas
 
   text: markdown
