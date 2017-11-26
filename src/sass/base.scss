@@ -102,6 +102,12 @@ article {
     }
   }
 
+  p > img {
+    width: 100%;
+    height: auto;
+    border: 1rem solid white;
+  }
+
   p, ul, ol, blockquote {
     font-family: 'Crimson Text', serif;
     font-size: 2rem;
@@ -111,9 +117,12 @@ article {
 
   blockquote {
     p {
-      font-size: 2.3rem;
-      line-height: 1.3em;
+      font-family: 'Assistant', sans-serif;
+      line-height: 1.5em;
       font-style: italic;
+      i, em {
+        font-style: normal;
+      }
     }
   }
 
