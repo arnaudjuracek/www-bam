@@ -20,8 +20,6 @@ fields:
     label: Titre
     type:  text
 
-  metas: metas
-
   abstract:
     label: Résumé
     extends: markdown

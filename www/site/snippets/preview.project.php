@@ -6,8 +6,12 @@
       <?php endif ?>
     </figure>
     <aside class="preview-project-infos">
-      <h2 class="preview-project-info preview-project-info-title"><?php echo $page->title()->html() ?></h2>
-      <?php echo $page->description()->kt() ?>
+      <h2 class="preview-project-title">
+        <?php echo $page->title()->html() ?>
+      </h2>
+      <div class="preview-project-info">
+        <?php echo $page->description()->kt() ?>
+      </div>
     </aside>
   </a>
 </li>

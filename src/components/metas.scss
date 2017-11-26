@@ -7,18 +7,18 @@
   .meta {
     position: relative;
 
-    svg {
-      position: absolute;
-      top: 0.125em;
+    &[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      position: relative;
       left: 0;
-      fill: none;
-      stroke: color(gray);
-      stroke-width: 1rem;
+      text-align: left;
+      transform: none;
 
-      height: 1em;
-      width: auto;
-      padding: 1px;
-      transform: translateX(calc(-100% - 1ch));
+      color: color(gray) !important;
+      font-weight: bold;
+      text-transform: lowercase;
+      font-variant: small-caps;
     }
   }
 }

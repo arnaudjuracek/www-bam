@@ -1,15 +1,38 @@
 .contact {
   .contact-informations {
     list-style: none;
+    padding-left: 0;
+
+    @media (min-width: breakpoint(phone)) {
+      display: flex;
+      .contact-information-column {
+        width: 50%;
+        &:not(:last-child) { margin-right: 2rem; }
+      }
+    }
 
     .contact-information {
-      p { font-family: 'Assistant', sans-serif; }
+      font-size: 1.6rem;
+      p {
+        font-family: 'Assistant', sans-serif;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+
+      &[data-label]::before {
+        content: attr(data-label);
+        font-family: 'Assistant', sans-serif;
+        font-weight: bold;
+        text-transform: lowercase;
+        font-variant: small-caps;
+      }
     }
   }
 
   .contact-map {
-    margin-top: 5rem;
+    margin-top: 2rem;
     border: 1rem solid white;
     background: white;
+    line-height: 0;
   }
 }

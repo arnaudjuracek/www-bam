@@ -1,7 +1,7 @@
 <ul class="social-links">
   <li class="social-link">
     <a href="<?php echo page('contact')->url() ?>">
-      <?php snippet('icons/email') ?>
+      <?php snippet('icons/contact') ?>
     </a>
   </li>
   <li class="social-link">

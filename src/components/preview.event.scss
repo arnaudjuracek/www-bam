@@ -50,25 +50,24 @@
 
       color: color(text);
       font-weight: 700;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       line-height: 1.2em;
 
       header.preview-event-header {
         .preview-event-title {
           text-transform: uppercase;
           font-size: 2.8rem;
-          margin-bottom: 1em;
           line-height: 1.2em;
+          margin-bottom: 1rem;
         }
 
         .preview-event-meta {
           position: relative;
           margin-bottom: 0.4em;
-          p { display: inline; }
 
           &[data-label]::before {
-            display: none;
             content: attr(data-label);
+            font-weight: bold;
             color: color(gray);
             text-transform: lowercase;
             font-variant: small-caps;
@@ -101,14 +100,18 @@
       flex-direction: column;
 
       .preview-event-cover {
+        width: 100%;
         border: none;
+        border-bottom: 2px solid;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+
         &::before { display: none; }
         .preview-event-cover-content {
           position: relative;
           text-align: left;
           transform: none;
           line-height: 1.2em;
-          margin-bottom: 1em;
 
           .preview-event-date {
             font-size: 2rem;

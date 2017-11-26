@@ -17,8 +17,17 @@ fields:
     label: Titre
     type:  text
 
-  metas:
-    label: Informations
+  left:
+    label: Informations (colonne gauche)
+    width: 1/2
+    extends: metas
+    fields:
+      value:
+        label: Texte
+
+  right:
+    label: Informations (colonne droite)
+    width: 1/2
     extends: metas
     fields:
       value:

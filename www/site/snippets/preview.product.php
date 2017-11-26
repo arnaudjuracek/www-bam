@@ -10,13 +10,15 @@
         <h2 class="preview-product-title">
           <?php echo $page->title()->html() ?>
         </h2>
-        <ul class="preview-product-metas">
-          <li class="preview-product-meta">
-            <a class="preview-product-link" href="<?php echo $page->link() ?>" target="_blank">
-              <?php echo $page->link() ?>
-            </a>
-          </li>
-        </ul>
+        <?php if ($page->metas()->isNotEmpty()) : ?>
+          <ul class="preview-product-metas">
+            <?php foreach ($page->metas()->toStructure() as $meta) : ?>
+              <li class="preview-product-meta" <?php ecco($meta->label()->isNotEmpty(), 'data-label="' . $meta->label() . '"') ?>>
+                <?php echo $meta->value()->kirbytext() ?>
+              </li>
+            <?php endforeach ?>
+          </ul>
+        <?php endif ?>
       </header>
       <div class="preview-product-content">
         <?php echo $page->text()->kirbytext() ?>

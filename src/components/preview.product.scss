@@ -36,25 +36,24 @@
 
       color: color(text);
       font-weight: 700;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       line-height: 1.2em;
 
       header.preview-product-header {
         .preview-product-title {
           text-transform: uppercase;
           font-size: 2.8rem;
-          margin-bottom: 1em;
           line-height: 1.2em;
+          margin-bottom: 1rem;
         }
 
         .preview-product-meta {
           position: relative;
           margin-bottom: 0.4em;
-          p { display: inline; }
 
           &[data-label]::before {
-            display: none;
             content: attr(data-label);
+            font-weight: bold;
             color: color(gray);
             text-transform: lowercase;
             font-variant: small-caps;
