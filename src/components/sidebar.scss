@@ -7,6 +7,15 @@
   display: flex;
   flex-direction: column;
 
+  p > a {
+    color: color(background);
+    text-decoration: none;
+    border-bottom: 1px solid;
+
+    @include easing(300ms, border-color);
+    &:hover { border-color: transparent; }
+  }
+
   header {
     .sidebar-icon {
       position: relative;

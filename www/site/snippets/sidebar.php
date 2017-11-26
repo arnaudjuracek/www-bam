@@ -8,13 +8,17 @@
 <aside class="sidebar">
   <header class="sidebar-header">
     <div class="sidebar-icon">
+      <?php
+        $icon = snippet('icons/' . $top->uid(), [], true);
+        if (!$icon) $icon = snippet('icons/web', [], true);
+      ?>
       <?php if (isset($hijack_sidebar)) : ?>
         <a href="<?php echo $top->url() ?>">
           <span class="sidebar-icon-back-arrow"><?php snippet('icons/back-arrow') ?></span>
-          <?php snippet('icons/' . $top->uid()) ?>
+          <?php echo $icon ?>
         </a>
       <?php else : ?>
-        <?php snippet('icons/' . $top->uid()) ?>
+        <?php echo $icon ?>
       <?php endif ?>
     </div>
     <h1 class="sidebar-title"><?php echo $p->title()->html() ?></h1>

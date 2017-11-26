@@ -26,4 +26,4 @@ Subtitle:
 
 ----
 
-Footer: **Collectif Bam** – Sauf mention contraire les contenus sont mis sous [Licence Creative Commons BY NC SA](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/).
+Footer: **Collectif Bam** – Sauf mention contraire les contenus sont mis sous [Licence Creative Commons BY NC SA](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/)  – [Mentions légales](/mentions-legales)
