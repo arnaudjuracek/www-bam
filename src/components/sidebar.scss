@@ -90,34 +90,172 @@
     }
   }
 
-  .sidebar-scroll-wrapper {
-    flex: 1;
+  .sidebar-mobile-expand-wrapper {
     position: relative;
-    margin-bottom: 1rem;
-    overflow-x: hidden; // hide scrollbar
+    flex: 1;
 
-    .sidebar-scroll-content {
+    .sidebar-scroll-wrapper {
       position: absolute;
       top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 1rem;
+      overflow-x: hidden; // hide scrollbar
+
+      .sidebar-scroll-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 4rem;
+        overflow-y: scroll;
+
+        // overflow scrollbar
+        box-sizing: content-box;
+        padding-right: 17px;
+      }
+    }
+
+    .internal-navigation-link:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      position: absolute;
       bottom: 0;
       width: 100%;
-      padding-bottom: 2rem;
-      overflow-y: scroll;
-
-      // overflow scrollbar
-      box-sizing: content-box;
-      padding-right: 17px;
+      padding-top: 3rem;
+      @include themable(background);
+      .social-link svg {
+        stroke: color(background);
+      }
     }
   }
 
-  .internal-navigation-link:not(:last-child) {
-    margin-bottom: 1rem;
+  .sidebar-mobile-toggle-expand,
+  .sidebar-mobile-toggle-expand-label { display: none; }
+}
+
+// These mixins allow layout-control of this component via layout.scss
+
+@mixin sidebar-swipable () {
+  @include easing(300ms, transform);
+  will-change: transform;
+  transform: translateX(calc(-100% + 1rem));
+
+  // Extend the hitbox to prevent weird :hover effect
+  left: 0rem;
+  border-left: 1rem solid color(background);
+
+  &:hover { transform: none; }
+}
+
+@mixin sidebar-compact () {
+  top: 0;
+  left: 0;
+  bottom: initial;
+  width: 100%;
+
+  padding: 0;
+  background: none!important;
+
+  .sidebar-title {
+    position: relative;
+    z-index: 1;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    @include themable(background);
   }
 
-  footer {
-    margin-top: 2rem;
-    .social-link svg {
-      stroke: color(background);
+  .sidebar-mobile-expand-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 2rem 2rem;
+
+    @include easing(300ms, transform);
+    transform: translateY(-100%);
+
+    @include themable(background);
+
+    .sidebar-scroll-wrapper {
+      position: relative;
+      max-height: 40vh;
+      .sidebar-scroll-content {
+        padding-bottom: 0;
+        position: relative;
+
+        .sidebar-abstract {
+          margin-top: 0;
+        }
+      }
     }
   }
+
+  // Basic :hover to expand the menu
+
+  // input.hamburger
+  //       &~ul
+  //         display none
+  //       &:checked~ul
+  //         display block
+  //       &:checked~label[for="hamburger"]
+  //         transform rotate(90deg)
+  //     label[for="hamburger"]
+
+
+  &[mobile-expandable] {
+    .sidebar-mobile-toggle-expand-label {
+      z-index: 2;
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5rem;
+    }
+
+    .sidebar-title::before {
+      content: '☰';
+      position: absolute;
+      display: inline-block;
+      top: 1rem;
+      right: 2rem;
+      @include easing(300ms, transform);
+      transform: rotate(0deg);
+    }
+
+    .sidebar-mobile-toggle-expand:checked {
+      & ~ .sidebar-mobile-toggle-expand-label-overlay {
+        position: fixed;
+        display: block;
+        top: 6rem;
+        left: 0;
+        right: 0;
+        bottom: 5rem;
+      }
+
+      & ~ .sidebar-header .sidebar-title::before {
+        transform: rotate(-90deg);
+      }
+      & ~ .sidebar-mobile-expand-wrapper {
+        transform: translateY(5rem);
+      }
+    }
+  }
+
+  .sidebar-footer {
+    position: relative;
+    .social-links {
+      width: 50%;
+      float: right;
+    }
+  }
+
+  .sidebar-icon,
+  .sidebar-title::after,
+  .sidebar-metas,
+  .toc { display: none; }
 }

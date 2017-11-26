@@ -5,7 +5,11 @@
   $p = isset($hijack_sidebar) ? $hijack_sidebar : $top;
 ?>
 
-<aside class="sidebar">
+<aside class="sidebar" <?php ecco($p->hasVisibleChildren(), 'mobile-expandable') ?>>
+  <input type="checkbox" class="sidebar-mobile-toggle-expand" id="sidebarMobileExpandToggler" style="display:none"/>
+  <label for="sidebarMobileExpandToggler" class="sidebar-mobile-toggle-expand-label"></label>
+  <label for="sidebarMobileExpandToggler" class="sidebar-mobile-toggle-expand-label-overlay"></label>
+
   <header class="sidebar-header">
     <div class="sidebar-icon">
       <?php
@@ -24,35 +28,37 @@
     <h1 class="sidebar-title"><?php echo $p->title()->html() ?></h1>
   </header>
 
-  <div class="sidebar-scroll-wrapper">
-    <div class="sidebar-scroll-content">
-      <?php if (isset($metas)) : ?>
-        <ul class="sidebar-metas">
-          <?php foreach ($metas as $meta) : ?>
-            <li class="sidebar-meta">
-              <?php echo $meta ?>
-            </li>
-          <?php endforeach ?>
-        </ul>
-      <?php else: ?>
-        <aside class="sidebar-abstract">
-          <?php echo $p->description()->kirbytext() ?>
-        </aside>
-      <?php endif ?>
+  <div class="sidebar-mobile-expand-wrapper">
+    <div class="sidebar-scroll-wrapper">
+      <div class="sidebar-scroll-content">
+        <?php if (isset($metas)) : ?>
+          <ul class="sidebar-metas">
+            <?php foreach ($metas as $meta) : ?>
+              <li class="sidebar-meta">
+                <?php echo $meta ?>
+              </li>
+            <?php endforeach ?>
+          </ul>
+        <?php else: ?>
+          <aside class="sidebar-abstract">
+            <?php echo $p->description()->kirbytext() ?>
+          </aside>
+        <?php endif ?>
 
-      <nav class="internal-navigation">
-        <ul class="internal-navigation-links">
-          <?php
-            if (isset($filters)) snippet('sidebar.nav-filters');
-            else snippet('sidebar.nav-default', ['p' => $p]);
-          ?>
-        </ul>
-      </nav>
+        <nav class="internal-navigation">
+          <ul class="internal-navigation-links">
+            <?php
+              if (isset($filters)) snippet('sidebar.nav-filters');
+              else snippet('sidebar.nav-default', ['p' => $p]);
+            ?>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
 
-  <footer class="sidebar-footer">
-    <?php snippet('social') ?>
-  </footer>
+    <footer class="sidebar-footer">
+      <?php snippet('social') ?>
+    </footer>
+  </div>
 </aside>
 

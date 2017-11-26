@@ -45,14 +45,13 @@ $breakpoints: (
 
 @import 'sass/misc';
 @import 'sass/base';
+@import 'components/sidebar';
+@import 'components/menu';
+@import 'components/splashscreen';
 @import 'components/footnotes';
-@import 'sass/layout';
 @import 'components/gallery';
 @import 'components/metas';
 @import 'components/grid';
-@import 'components/splashscreen';
-@import 'components/menu';
-@import 'components/sidebar';
 @import 'components/sidebar.filters';
 @import 'components/social-links';
 @import 'components/linkbox';
@@ -65,3 +64,4 @@ $breakpoints: (
 @import 'components/preview.event';
 @import 'components/preview.job';
 @import 'components/contact';
+@import 'sass/layout';

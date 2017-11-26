@@ -4,16 +4,17 @@
 
   @media (min-width: breakpoint(tablet)) { @include grid(3, $margin); }
   @media (max-width: breakpoint(tablet)) { @include grid(2, $margin); }
-  @media (max-width: breakpoint(phone)) { @include grid(1, $margin); }
 
   margin-right: $margin;
   margin-bottom: $margin;
 
   background: white;
 
-  outline: 2px solid transparent;
-  @include easing(300ms, outline-color);
-  &:hover { @include themable(outline-color); }
+  @media (min-width: breakpoint(phone)) {
+    outline: 2px solid transparent;
+    @include easing(300ms, outline-color);
+    &:hover { @include themable(outline-color); }
+  }
 
   .preview-member-content {
     width: 100%;

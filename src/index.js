@@ -13,25 +13,29 @@ const blazy = new Blazy({
   selector: 'figure.lazyload img',
   successClass: 'is-loaded'
 })
+window.addEventListener('load', blazy.revalidate)
 
+Gallery({ class: 'gallery' })
+
+Zoom(document.querySelectorAll('article img'), {
+  background: '#FFF',
+  margin: 10,
+  scrollOffset: 1
+})
 
 if (!MOBILE) {
   TocHighlighter({
     anchorSelector: 'article .anchor',
     tocSelector: 'aside.sidebar .toc a',
     className: 'is-active',
-    offy: 100
+    offy: 200
   })
-
 
   const scroll = new SmoothScroll('a[href*="#"]', {
     ignore: '[data-scroll-ignore]',
     speed: 300,
+    offset: 160,
     easing: 'easeInOutQuad'
-  })
-
-  Gallery({
-    class: 'gallery'
   })
 
   Footnotes({ offy: -80 + 5 })
@@ -39,11 +43,5 @@ if (!MOBILE) {
   RemoteDescription({
     selector: '.preview-project-infos',
     container: 'aside.outside'
-  })
-
-  Zoom(document.querySelectorAll('article img'), {
-    background: '#FFF',
-    margin: 10,
-    scrollOffset: 1
   })
 }

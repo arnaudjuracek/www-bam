@@ -11,13 +11,15 @@
 
   background: white;
 
-  outline: 2px solid transparent;
-  @include easing(300ms, outline-color);
-  &:hover {
-    @include themable(outline-color);
-    .preview-project-cover {
-      img {
-        filter: none !important;
+  @media (min-width: breakpoint(phone)) {
+    outline: 2px solid transparent;
+    @include easing(300ms, outline-color);
+    &:hover {
+      @include themable(outline-color);
+      .preview-project-cover {
+        img {
+          filter: none !important;
+        }
       }
     }
   }

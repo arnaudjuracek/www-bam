@@ -25,6 +25,7 @@
     }
 
     .link-icon {
+      display: none;
       svg {
         padding: 1px;
         width: 100%;
@@ -32,6 +33,59 @@
         fill: none;
         stroke: color(text);
       }
+    }
+  }
+}
+
+// These mixins allow layout-control of this component via layout.scss
+
+@mixin menu-icons () {
+  .links {
+    margin: 0 auto;
+    line-height: 0;
+    .link {
+      opacity: 0;
+      margin-bottom: 3rem;
+
+      &:hover { @include applyTheme(svg, stroke); }
+      .link-icon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+        line-height: 0;
+
+        width: 4rem;
+        stroke-width: 0.5rem;
+        svg { @include easing(300ms, stroke); }
+      }
+    }
+  }
+}
+
+@mixin menu-app () {
+  top: initial;
+  bottom: 0;
+  padding: 1rem 2rem;
+
+  border: none;
+  border-top: 2px solid;
+  background: color(background);
+  @include themable(border-color);
+
+  pointer-events: auto;
+
+  .links {
+    line-height: 0;
+    .link-text { display: none; }
+    .link-icon {
+      display: block;
+      width: 3rem!important;
+      svg {
+        stroke-width: 0.5rem;
+      }
+    }
+    .is-active .link-icon svg {
+      @include themable(stroke);
     }
   }
 }
