@@ -79,13 +79,25 @@
   }
 
   .sidebar-metas {
-    padding-top: 2.8rem;
+    display: flex;
+    flex-wrap: wrap;
+
     .sidebar-meta {
+      min-width: 50%;
+
       font-weight: 700;
       font-size: 1.6rem;
       line-height: 1.2em;
-      &:not(:last-child) {
-        @include emdash(1.5em, 1.5em, 2.8rem);
+
+      padding-top: 1.5rem;
+      @include emdash(1.5rem, 0, 2.8rem);
+
+      &[data-label]::before {
+        content: attr(data-label);
+        font-weight: bold;
+        opacity: 0.7;
+        text-transform: lowercase;
+        font-variant: small-caps;
       }
     }
   }
@@ -187,24 +199,11 @@
         padding-bottom: 0;
         position: relative;
 
-        .sidebar-abstract {
-          margin-top: 0;
-        }
+        .sidebar-abstract { margin-top: 0; }
+        .sidebar-metas ~ .sidebar-abstract { margin-top: 2.8rem; }
       }
     }
   }
-
-  // Basic :hover to expand the menu
-
-  // input.hamburger
-  //       &~ul
-  //         display none
-  //       &:checked~ul
-  //         display block
-  //       &:checked~label[for="hamburger"]
-  //         transform rotate(90deg)
-  //     label[for="hamburger"]
-
 
   &[mobile-expandable] {
     .sidebar-mobile-toggle-expand-label {
@@ -256,6 +255,6 @@
 
   .sidebar-icon,
   .sidebar-title::after,
-  .sidebar-metas,
+  // .sidebar-metas,
   .toc { display: none; }
 }

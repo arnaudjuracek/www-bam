@@ -31,19 +31,24 @@
   <div class="sidebar-mobile-expand-wrapper">
     <div class="sidebar-scroll-wrapper">
       <div class="sidebar-scroll-content">
-        <?php if (isset($metas)) : ?>
+        <?php if (isset($hijack_sidebar) || isset($metas)) : ?>
           <ul class="sidebar-metas">
-            <?php foreach ($metas as $meta) : ?>
-              <li class="sidebar-meta">
-                <?php echo $meta ?>
-              </li>
-            <?php endforeach ?>
+            <?php if (isset($metas)) : ?>
+              <?php foreach ($metas as $meta) : ?>
+                <li class="sidebar-meta"><?php echo widont($meta) ?></li>
+              <?php endforeach ?>
+            <?php elseif (isset($hijack_sidebar)) : ?>
+              <?php foreach ($p->metas()->toStructure() as $meta) : ?>
+                <li class="sidebar-meta" <?php ecco($meta->label()->isNotEmpty(), 'data-label="' . $meta->label() . '"') ?>>
+                  <?php echo $meta->value()->kirbytext() ?>
+                </li>
+              <?php endforeach ?>
+            <?php endif ?>
           </ul>
-        <?php else: ?>
-          <aside class="sidebar-abstract">
-            <?php echo $p->description()->kirbytext() ?>
-          </aside>
         <?php endif ?>
+        <aside class="sidebar-abstract">
+          <?php echo $p->description()->kirbytext() ?>
+        </aside>
 
         <nav class="internal-navigation">
           <ul class="internal-navigation-links">
