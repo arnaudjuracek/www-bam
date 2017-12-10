@@ -1,4 +1,4 @@
-<li class="grid-item preview-event <?php ecco($disable_past_event && $page->date() + 24*60*60 < time() ,'is-past') ?>">
+<li class="grid-item preview-event <?php ecco($disable_past_event && $page->date() + 24*60*60 < time() ,'is-past') ?>" data-fade-direction="left">
   <div class="preview-event-container">
     <div class="preview-event-cover">
       <div class="preview-event-cover-content">

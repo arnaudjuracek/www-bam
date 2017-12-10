@@ -1,4 +1,4 @@
-<li class="grid-item preview-product">
+<li class="grid-item preview-product" data-fade-direction="left">
   <div class="preview-product-container">
     <figure class="preview-product-cover">
       <?php if ($cover = $page->image($page->cover())): ?>
