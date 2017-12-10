@@ -18,7 +18,9 @@
       position: relative;
       flex: none;
       width: 33.33%;
-      @include ratio(4/3);
+      height: 0;
+      padding-bottom: 33.33%;
+
       border: 2px solid;
       @include themable(border-color);
 
@@ -60,17 +62,21 @@
           line-height: 1.2em;
           margin-bottom: 1rem;
         }
+        .preview-event-metas {
+          @media (min-width: breakpoint(phone)) {column-count: 2; }
 
-        .preview-event-meta {
-          position: relative;
-          margin-bottom: 0.4em;
+          .preview-event-meta {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 0.4em;
 
-          &[data-label]::before {
-            content: attr(data-label);
-            font-weight: bold;
-            color: color(gray);
-            text-transform: lowercase;
-            font-variant: small-caps;
+            &[data-label]::before {
+              content: attr(data-label);
+              font-weight: bold;
+              color: color(gray);
+              text-transform: lowercase;
+              font-variant: small-caps;
+            }
           }
         }
       }
@@ -101,6 +107,7 @@
 
       .preview-event-cover {
         width: 100%;
+        height: auto;
         border: none;
         border-bottom: 2px solid;
         padding-bottom: 1rem;
