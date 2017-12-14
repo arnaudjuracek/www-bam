@@ -11,17 +11,17 @@ Kirby Configuration
 c::set([
   'widget.backup.include_site'     => true,
   'plugin.footnotes.scroll'        => false,
-  'panel.kirbytext'                => false,
+  'panel.kirbytext'                => true,
   'error'                          => 'erreur',
 
   'routes' => [
     array(
-      // Redirect all top pages (except events) to their first child
+      // Redirect all top pages (except events and sandbox) to their first child
       'pattern' => '(:any)',
       'action'  => function ($uid) {
         if ($topPage = page($uid)) {
           $page = $topPage->children()->visible()->first();
-          if (!$page || $uid == 'evenements') {
+          if (!$page || $uid == 'evenements' || $uid == 'bac-a-sable') {
             site()->visit($topPage);
             return $topPage;
           }

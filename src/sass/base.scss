@@ -102,6 +102,28 @@ article {
     }
   }
 
+  figure.video {
+    margin-bottom: 1em;
+
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+
+    border: 1rem solid white;
+    background: black;
+
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0rem;
+      left: 0rem;
+    }
+  }
+
   p > img {
     width: 100%;
     height: auto;
@@ -124,6 +146,44 @@ article {
         font-style: normal;
       }
     }
+  }
+
+  code {
+    // Github style
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 75%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 0.3rem;
+  }
+
+  pre {
+    width: 100%;
+    overflow: auto;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border: 1rem solid white;
+
+    & code {
+      display: block;
+      line-height: 1.4em;
+      overflow: visible;
+      min-width: 100%;
+      background: none;
+    }
+  }
+
+  hr {
+    margin: 4rem 0;
+    border: none;
+    border-top: 3px solid;
+    @include themable(border-color);
+  }
+
+  del {
+    @include themable(text-decoration-color);
   }
 
   li > ul, li > ol { margin-bottom: 0; }
