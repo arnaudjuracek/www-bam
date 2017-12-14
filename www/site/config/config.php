@@ -9,10 +9,12 @@ Kirby Configuration
 */
 
 c::set([
-  'widget.backup.include_site'     => true,
-  'plugin.footnotes.scroll'        => false,
-  'panel.kirbytext'                => true,
-  'error'                          => 'erreur',
+  'widget.backup.include_site' => true,
+  'plugin.footnotes.scroll'    => false,
+  'panel.kirbytext'            => true,
+  'error'                      => 'erreur',
+  'cache.ignore'               => 'sitemap',
+
 
   'routes' => [
     array(
