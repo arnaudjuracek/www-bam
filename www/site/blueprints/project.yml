@@ -14,8 +14,8 @@ pages:
       uid: resume
       template: article
       num: 1
-    - title: Historique
-      uid: historique
+    - title: Détails
+      uid: details
       template: article
       num: 2
 
