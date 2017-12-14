@@ -18,7 +18,9 @@
       position: relative;
       flex: none;
       width: 33.33%;
-      @include ratio(1);
+      height: 0;
+      padding-bottom: 33.33%;
+
       border: 2px solid;
       @include themable(border-color);
 
@@ -61,16 +63,21 @@
           margin-bottom: 1rem;
         }
 
-        .preview-job-meta {
-          position: relative;
-          margin-bottom: 0.4em;
+        .preview-job-metas {
+          @media (min-width: breakpoint(phone)) { column-count: 2; }
 
-          &[data-label]::before {
-            content: attr(data-label);
-            font-weight: bold;
-            color: color(gray);
-            text-transform: lowercase;
-            font-variant: small-caps;
+          .preview-job-meta {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 0.4em;
+
+            &[data-label]::before {
+              content: attr(data-label);
+              font-weight: bold;
+              color: color(gray);
+              text-transform: lowercase;
+              font-variant: small-caps;
+            }
           }
         }
       }
@@ -81,14 +88,6 @@
         font-weight: normal;
         line-height: 1.4em;
       }
-    }
-  }
-
-  &.is-past {
-    .preview-job-container {
-      opacity: 0.3;
-      &:hover { opacity: 1; }
-      @include easing(300ms, opacity);
     }
   }
 }
