@@ -8,12 +8,9 @@
   }
 
   .gallery-item {
-    &:not(:last-child) {margin-bottom: 2rem; }
-
     .gallery-media {
       display: inline-block;
       margin: 0;
-
     }
   }
 }
