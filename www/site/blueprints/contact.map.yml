@@ -1,0 +1,41 @@
+title: Contact + map
+
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: false
+
+icon: map-marker
+
+pages: false
+files: false
+
+fields:
+  title:
+    label: Titre
+    type:  text
+
+  left:
+    label: Informations (colonne gauche)
+    width: 1/2
+    extends: metas
+    fields:
+      value:
+        label: Texte
+
+  right:
+    label: Informations (colonne droite)
+    width: 1/2
+    extends: metas
+    fields:
+      value:
+        label: Texte
+
+  address:
+    required: true
+    label: Adresse
+    type: text
+    icon: map-marker
+    help: Ce champ sera utilisé par Google Map

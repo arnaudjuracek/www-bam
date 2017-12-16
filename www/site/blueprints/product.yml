@@ -23,14 +23,11 @@ fields:
     label: Titre
     type:  text
 
-  link:
-    label: URL externe
-    type: url
-    width: 1/2
-
   cover:
     label: Photo de profil
     type: image
-    width: 1/2
+    required: true
+
+  metas: metas
 
   text: markdown

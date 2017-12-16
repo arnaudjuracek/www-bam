@@ -1,6 +1,7 @@
 .grid-items {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 
   width: 100%;
 
@@ -12,7 +13,11 @@
     .grid-item:nth-of-type(#{$i}) {
       opacity: 0;
       animation: fallIn 300ms ease forwards;
-      animation-delay: #{$i * 100}ms;
+      animation-delay: #{$i * 50}ms;
+      &[data-fade-direction='left'] {
+        animation: fadeIn 300ms ease forwards;
+        animation-delay: #{$i * 50}ms;
+      }
     }
   }
 }

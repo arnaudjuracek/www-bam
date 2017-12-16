@@ -1,0 +1,28 @@
+title: Job
+icon: coffee
+
+options:
+  preview: true
+  status: true
+  template: true
+  url: true
+  delete: true
+
+pages: false
+files:
+  fields:
+    focus:
+      label: Point de focus
+      type: focus
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+
+  metas: metas
+
+  text: markdown

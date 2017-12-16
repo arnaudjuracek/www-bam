@@ -1,7 +1,7 @@
 body {}
 
-.medium-zoom-overlay { z-index: 3; }
 .medium-zoom-image { z-index: 4 !important; }
+.medium-zoom-overlay { z-index: 3; }
 
 aside.sidebar {
   z-index: 2;
@@ -10,18 +10,13 @@ aside.sidebar {
   left: 1rem;
   bottom: 1rem;
   width: 36rem;
-  @media (max-width: breakpoint(tablet)) {
-    @include easing(300ms, transform);
-    will-change: transform;
-    transform: translateX(calc(-100% + 1rem));
 
-    // Extend the hitbox to prevent weird :hover effect
-    left: 0rem;
-    border-left: 1rem solid color(background);
+  @media (min-width: breakpoint(phone)) and (max-width: breakpoint(tablet)) {
+    @include sidebar-swipable();
+  }
 
-    &:hover {
-      transform: none;
-    }
+  @media (max-width: breakpoint(phone)) {
+    @include sidebar-compact();
   }
 }
 
@@ -49,6 +44,10 @@ nav.menu {
       min-width: 100%;
     }
   }
+
+  @media (max-width: breakpoint(phone)) {
+    @include menu-app();
+  }
 }
 
 main {
@@ -64,6 +63,15 @@ main {
     padding: 4rem;
     min-width: 100%;
   }
+
+  @media (max-width: breakpoint(phone)) {
+    top: 6rem;
+    padding: 2rem;
+    padding-bottom: 6rem;
+    max-width: 100vw;
+  }
+
+  article { flex: 1; }
 
   aside.outside {
     position: relative;
@@ -88,17 +96,19 @@ main {
       right: calc(-#{$width} - 8rem);
       width: $width;
 
-      .footnotes li { margin-top: 8rem; }
-
-      li:last-child {
-        padding-bottom: 5rem;
+      .footnotes li {
+        margin-top: 8rem;
+        &:last-child {
+          padding-bottom: 5rem;
+        }
       }
     }
   }
 
   footer {
-    color: lighten(color(text), 30%);
+    color: color(gray);
     padding: 6rem 0 1rem 0;
     font-size: 1.4rem;
+    line-height: 1.6em;
   }
 }

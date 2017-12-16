@@ -1,0 +1,30 @@
+.remote-description {
+  position: absolute;
+
+  font-size: 1.4rem;
+  line-height: 1.4em;
+
+  h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    @include themable(color);
+  }
+
+  @media (max-width: breakpoint(desktop)) {
+    display: none;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    transform: translateX(-1rem);
+    pointer-events: none;
+  }
+
+  &.is-visible {
+    @include easing(300ms);
+    transition-property: opacity, transform;
+    opacity: 1;
+    transform: none;
+  }
+}

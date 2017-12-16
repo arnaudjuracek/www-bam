@@ -1,0 +1,42 @@
+title: Bac à sable
+icon: cube
+
+options:
+  preview: true
+  status: false
+  template: false
+  url: false
+  delete: false
+
+pages: true
+files:
+  fields:
+    focus:
+      label: Point de focus
+      type: focus
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+    readonly: true
+
+  abstract:
+    label: Résumé
+    type: textarea
+    readonly: true
+
+  text:
+    label: Article
+    type: textarea
+    readonly: true
+
+  info:
+    type: info
+    label: Ressources complémentaires
+    text: >
+      https://getkirby.com/docs/content/text<br>
+      https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet

@@ -1,7 +1,0 @@
-label: Pictogramme
-type: select
-icon: smile-o
-default: architecture
-options:
-  www: www
-  mail: mail

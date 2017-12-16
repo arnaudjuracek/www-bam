@@ -1,6 +1,7 @@
 'use strict'
 
 const defaultOpts = {
+  pusher: '.metas',
   selector: '.footnotes li',
   backrefNotation: 'fnref-%v',
   offy: 0,
@@ -17,7 +18,9 @@ export default function (opts) {
   window.addEventListener('resize', () => requestAnimationFrame(calc))
 
   function calc () {
-    let nextMinY = 0
+    const pusher = document.querySelector(opts.pusher)
+    const initialY = pusher && pusher.clientHeight > 0 ? pusher.clientHeight + opts.offy + opts.margin : 0
+    let nextMinY = initialY
 
     footnotes.forEach(el => {
       const backrefID = opts.backrefNotation.replace('%v', el.value)

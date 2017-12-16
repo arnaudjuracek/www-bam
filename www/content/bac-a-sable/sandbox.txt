@@ -1,0 +1,135 @@
+Title: Bac à sable
+
+----
+
+Text: 
+
+## Introduction à Markdown
+
+Notez tout d'abord la syntaxe pour les titres : une ligne commençant par un dièse # suivi d'un espace permet de créer un nouveau titre. Le nombre de dièses indique le niveau du titre : dans vos articles, afin de maximiser le SEO, n'utilisez que des H2 (##) et H3 (###).
+
+Par soucis de lecture/écriture, je conseille de toujours laisser un saut de ligne après un titre.
+
+## Mise en forme des paragraphes
+### Bold, italique, liens etc
+
+En markown, toute mise en forme est directement encodé dans le texte brut. Un texte gras sera placé entre **quatres astérisques**, tandis qu'un texte italique sera mis entre _deux underscores_. 
+Il est également possible de mettre de text en italique avec *seulement deux astérisques*, mais l'utilisation des underscores rend généralement la lecture et l'écriture d'un texte markdown plus simple. 
+
+On peut également barrer du texte en l'encadrant de ~~deux tildes de chaque côtés~~, et écrire du code en utilisant le `backtick` (ce qui est très utilisé sur [Github](http://github.com)).
+
+Comme vous l'avez peut-être remarqué ci-dessus, la syntaxe pour un hyperlien est un peu plus alambiqué, mais reste très simple : [texte du lien](http://addresse-du-lien.com). 
+(link: http://getkirby.com text: Kirby) propose également sa propre syntaxe, que je déconseille puisqu'il ne s'agit pas de _vrai_ markdown, mais après cela reste une affaire de goût.
+Enfin, lorsqu'un lien n'a pas besoin d'avoir un texte particulier, sachez que Kirby détecte automatiquement les liens, et que vous pouvez sans soucis simplement écrire http://votre-lien.fr.
+
+La syntaxe pour les notes de bas de page est quant à elle un peu plus complexe[^Une note de bas de page peut contenir du **bold**, de _l'italique_, des (link: http://google.fr/ text: liens). 
+Voir même des sauts de ligne.], mais on s'y fait vite.
+
+Notez enfin que tout ces éléments de syntaxe peuvent être combinés entre eux, pour par exemple faire un [_**lien bold italique**_](http://google.fr/).
+
+### Saut de lignes, paragraphes & citations
+
+Pour revenir à la ligne dans un paragraphe, un saut de ligne suffit.
+Deux sauts de lignes crééront un nouveau paragraphe, comme le lorem ipsum ci-dessous par exemple : 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Omnia contraria, quos etiam insanos esse vultis. Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. -, sed ut hoc iudicaremus, non esse in iis partem maximam positam beate aut secus vivendi. Res tota, Torquate, non doctorum hominum, velle post mortem epulis celebrari memoriam sui nominis. Duo Reges: constructio interrete. Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Heri, inquam, ludis commissis ex urbe profectus veni ad vesperum. Quicquid porro animo cernimus, id omne oritur a sensibus; In schola desinis. Quis hoc dicit? Fortemne possumus dicere eundem illum Torquatum?
+
+> Ceci est un bloc de citation. Il peut contenir des [liens](http://google.fr/), de _l'italique_ et du **bold**. 
+Comme pour au-dessus, il est possible de revenir à la ligne. 
+
+> Notez qu'un double saut de ligne créera un nouveau paragraphe et fera sortir du bloc de citation, qu'il faudra réactiver avec un `>`.
+
+Il est possible de faire des listes à puces en utilisant `-`, `+`, ou `*`, c'est au choix.
+* un élément
++ un deuxième élement
+- un troisième élément
+
+Pour faire des sous-listes, il suffit d'indenter avec au moins deux espaces :
++ un élément
+  + un sous-élément
+  + un deuxième sous-élément
++ un deuxième élément
+
+Les listes peuvent aussi être numérotées
+1. le premier élément
+2. le deuxième élément
+3. le troisième élément
+
+*Attention* : il est généralement déconseillé d'utiliser les listes pour hiérarchiser du contenu. Un titre = une hiérarchie. Les listes sont plutôt réservées à de petites énumérations.
+
+### Images
+
+Tout comme pour les liens, il y a deux façon de placer une image.
+En markdown traditionnel une image ressemble beaucoup à un lien, à la différence qu'on la précède d'un point d'exclamation. Le texte entre crochet est optionnel (mais recommandé), et sert à remplir la balise "alt" déterminant le texte à afficher en cas de non-chargement de l'image (ou d'un visiteur ayant des contraintes d'accessibilités). Ce qui donne ceci :
+
+![une image de chat](http://lorempixel.com/800/600/cats/1/)
+
+Contrairement aux liens, je recommande cette fois-ci d'utiliser la **syntaxe de Kirby**, qui est beaucoup plus simple puisque il suffit de spécifier le nom du fichier présent dans le panel sur la gauche : 
+
+(image: inception.png)
+
+Notez d'ailleurs qu'avec cette méthode il est possible de simplement glisser-déposer l'image directement de la barre latérale jusqu'au champ de texte.
+
+Enfin, le présent site vous offre une syntaxe supplémentaire pour mettre en page une série d'images. En plaçant vos images à la suite dans **une liste**, les images s'organiseront d'elles-mêmes dans une grille composée de haut en bas sur deux colonnes consécutives :
+
+- (image: chat-1.jpg)
+- (image: chat-2.jpg text: une image de chat)
+- (image: chat-3.jpg)
+- (image: chat-4.jpg)
+
+### Autres médias
+
+Dans la barre latérale du panel, il est possible de télécharger des fichiers qui ne sont pas des images. Cela peut-être pratique pour permettre le téléchargement à un fichier pdf par exemple. La syntaxe que Kirby met à votre disposition quasi-identique à celle des images : (file: chats.zip text: une archive de chats). 
+
+De la même façon, vous pouvez ajouter des embeds YouTube ou Vimeo : 
+(youtube: https://www.youtube.com/watch?v=nBW0seLwDNU)
+(vimeo: https://vimeo.com/132451639)
+
+Si vous désirez afficher directement du code, les embeds de [gist](https://gist.github.com/) fonctionnent sur le même principe : 
+(gist: https://gist.github.com/arnaudjuracek/04053e8d851cff0151e33244888e1bb2)
+
+S'il s'agit d'un plus petit bout de code ou que vous avez juste besoin d'un bloc qui affiche une fonte monochasse, vous pouvez utiliser trois backticks :
+
+```
+// Le texte qui est entre ces deux lignes est considéré comme du code par Kirby
+```
+
+```
+            ██████████  ████         █                 ██████████  ████         █                 ██████████  ████    
+        ████▒▒░░░░░░░░██▒▒░░██       █             ████▒▒░░░░░░░░██▒▒░░██       █             ████▒▒░░░░░░░░██▒▒░░██  
+      ██▒▒░░░░██░░██░░░░██░░░░██     █           ██▒▒░░░░██░░██░░░░██░░░░██     █           ██▒▒░░░░██░░██░░░░██░░░░██
+    ██▒▒░░░░░░██░░██░░░░░░▒▒░░██     █         ██▒▒░░░░░░██░░██░░░░░░▒▒░░██     █         ██▒▒░░░░░░██░░██░░░░░░▒▒░░██
+    ██░░░░░░░░██░░██░░░░░░▒▒▒▒██     █         ██░░░░░░░░██░░██░░░░░░▒▒▒▒██     █         ██░░░░░░░░██░░██░░░░░░▒▒▒▒██
+  ██░░░░░░▒▒▒▒░░░░░░▒▒▒▒░░░░▒▒██     █       ██░░░░░░▒▒▒▒░░░░░░▒▒▒▒░░░░▒▒██     █       ██░░░░░░▒▒▒▒░░░░░░▒▒▒▒░░░░▒▒██
+██▒▒░░░░░░░░░░░░██░░░░░░░░░░░░██     █     ██▒▒░░░░░░░░░░░░██░░░░░░░░░░░░██     █     ██▒▒░░░░░░░░░░░░██░░░░░░░░░░░░██
+██░░░░▒▒░░░░░░░░██░░░░░░░░░░▒▒██     █     ██░░░░▒▒░░░░░░░░██░░░░░░░░░░▒▒██     █     ██░░░░▒▒░░░░░░░░██░░░░░░░░░░▒▒██
+██░░░░▒▒░░░░░░░░░░░░░░░░░░░░██       █     ██░░░░▒▒░░░░░░░░░░░░░░░░░░░░██       █     ██░░░░▒▒░░░░░░░░░░░░░░░░░░░░██  
+  ██████░░░░░░░░░░░░░░░░░░▒▒██       █       ██████░░░░░░░░░░░░░░░░░░▒▒██       █       ██████░░░░░░░░░░░░░░░░░░▒▒██  
+██▒▒▒▒▒▒██░░░░░░░░░░░░░░░░▒▒██       █     ██▒▒▒▒▒▒██░░░░░░░░░░░░░░░░▒▒██       █     ██▒▒▒▒▒▒██░░░░░░░░░░░░░░░░▒▒██  
+██▒▒▒▒▒▒▒▒██░░░░░░░░░░░░▒▒██         █     ██▒▒▒▒▒▒▒▒██░░░░░░░░░░░░▒▒██         █     ██▒▒▒▒▒▒▒▒██░░░░░░░░░░░░▒▒██    
+██▒▒▒▒▒▒▒▒██░░░░░░░░░░▒▒████         █     ██▒▒▒▒▒▒▒▒██░░░░░░░░░░▒▒████         █     ██▒▒▒▒▒▒▒▒██░░░░░░░░░░▒▒████    
+  ██▒▒▒▒▒▒▒▒██▒▒▒▒▒▒████▒▒▒▒██       █       ██▒▒▒▒▒▒▒▒██▒▒▒▒▒▒████▒▒▒▒██       █       ██▒▒▒▒▒▒▒▒██▒▒▒▒▒▒████▒▒▒▒██  
+    ██▒▒▒▒██████████▒▒▒▒▒▒▒▒▒▒██     █         ██▒▒▒▒██████████▒▒▒▒▒▒▒▒▒▒██     █         ██▒▒▒▒██████████▒▒▒▒▒▒▒▒▒▒██
+      ██████      ████████████       █           ██████      ████████████       █           ██████      ████████████  
+```
+
+## Bonus : un grand pouvoir implique de grandes responsabilités
+
+Sachez enfin que Kirby autorise l'écriture en markdown de balises <span style="display:inline-block; font-weight: bold; color: red; background-color: yellow; transform: rotate(-12deg); font-size: larger; font-family: Comic Sans MS">HTML</span>. 
+
+<!-- Vous pouvez aussi écrire des commentaires en HTML -->
+
+Comme pour le `HTML`, il est possible d'utiliser des [`character entities`](http://brajeshwar.github.io/entities/), comme par exemple pour tracer le beau tirait cadratin de "&nbsp;**&Eacute;&mdash;e**&nbsp;" ou&nbsp;encore&nbsp;pour&nbsp;éviter&nbsp;de&nbsp;casser&nbsp;des&nbsp;phrases&nbsp;à&nbsp;certains&nbsp;endroits&nbsp;en&nbsp;utilisant&nbsp;des&nbsp;espaces&nbsp;insécables.
+
+## Ressources complémentaires 
+
+- https://getkirby.com/docs/content/text
+- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+----
+
+Abstract: # Bienvenu ! 
+
+Cette page est une aide à l'édition de votre site web et à l'apprentissage de la syntaxe [Markdown](https://fr.wikipedia.org/wiki/Markdown), vous pouvez en faire ce que vous voulez. 
+
+Elle n'apparaîtra pas dans les résultats de recherches et n'est accessible qu'en connaissant l'url exacte.

@@ -1,0 +1,34 @@
+title: Contact + recrutement
+
+options:
+  preview: true
+  status: true
+  template: false
+  url: true
+  delete: false
+
+icon: map-marker
+
+pages: false
+files: true
+
+fields:
+  title:
+    label: Titre
+    type:  text
+
+  metas:
+    label: Informations
+    extends: metas
+    fields:
+      value:
+        label: Texte
+
+  jobs:
+    label: Annonces
+    type: structure
+    modalsize: large
+    fields:
+      info:
+        type: info
+        text: <b>TODO</b>

@@ -2,7 +2,7 @@
   font-size: 1.4rem;
   line-height: 1.4em;
 
-  color: lighten(color(text), 30%);
+  color: color(gray);
 
   li {
     &.is-loading {

@@ -1,7 +1,5 @@
 <?php snippet('header') ?>
-<?php snippet('sidebar', [
-  'force' => $page
-]) ?>
+<?php snippet('sidebar') ?>
 <?php snippet('menu') ?>
 
 <main>
@@ -24,8 +22,7 @@
   <aside class="outside outside-footnotes">
     <ul class="metas">
       <?php foreach ($page->metas()->toStructure() as $meta): ?>
-        <li class="meta">
-          <?php snippet('icons/' . $meta->icon()) ?>
+        <li class="meta" <?php ecco($meta->label()->isNotEmpty(), 'data-label="' . $meta->label() . '"') ?>>
           <?php echo $meta->value()->kirbytext() ?>
         </li>
       <?php endforeach ?>

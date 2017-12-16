@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Crimson+Text:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,400i,700|Crimson+Text:400,400i,700,700i');
 @import 'sass/reset';
 
 $colors: (
   background: #F4F5F4,
-  text: #2E2A26
+  text: #2E2A26,
+  gray: lighten(#2E2A26, 30%),
 );
 
 // these keys are top-pages' UID
@@ -14,7 +15,8 @@ $brand-colors: (
   contact: (#8A8A8D, #646569),
   projets: (#0083C7, #006BA4),
   evenements: (#00A787, #009478),
-  expertise: (#FF6B00, #BB4709)
+  expertise: (#FF6B00, #BB4709),
+  bac-a-sable: (blue, blue)
 );
 
 $breakpoints: (
@@ -44,17 +46,23 @@ $breakpoints: (
 
 @import 'sass/misc';
 @import 'sass/base';
+@import 'components/sidebar';
+@import 'components/menu';
+@import 'components/splashscreen';
 @import 'components/footnotes';
-@import 'sass/layout';
+@import 'components/gallery';
 @import 'components/metas';
 @import 'components/grid';
-@import 'components/splashscreen';
-@import 'components/menu';
-@import 'components/sidebar';
+@import 'components/sidebar.filters';
 @import 'components/social-links';
 @import 'components/linkbox';
 @import 'components/toc';
+@import 'components/remote-description';
 @import 'components/preview.member';
 @import 'components/preview.partner';
 @import 'components/preview.product';
 @import 'components/preview.project';
+@import 'components/preview.event';
+@import 'components/preview.job';
+@import 'components/contact';
+@import 'sass/layout';

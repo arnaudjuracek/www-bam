@@ -3,16 +3,18 @@
   display: inline-block;
 
   @media (min-width: breakpoint(tablet)) { @include grid(3, $margin); }
-  @media (max-width: breakpoint(tablet)) {@include grid(2, $margin); }
-  @media (max-width: breakpoint(phone)) {@include grid(1, $margin); }
+  @media (max-width: breakpoint(tablet)) { @include grid(2, $margin); }
 
   margin-right: $margin;
   margin-bottom: $margin;
 
   background: white;
-  filter: grayscale(1);
-  @include easing(300ms, filter);
-  &:hover { filter: none }
+
+  @media (min-width: breakpoint(phone)) {
+    outline: 2px solid transparent;
+    @include easing(300ms, outline-color);
+    &:hover { @include themable(outline-color); }
+  }
 
   .preview-member-content {
     width: 100%;
@@ -23,6 +25,7 @@
 
   .preview-member-cover {
     img {
+      filter: grayscale(1);
       width: 100%;
       height: auto;
     }

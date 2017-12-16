@@ -1,0 +1,18 @@
+.sidebar-filters {
+  margin-bottom: 0.5rem;
+
+  .sidebar-filter {
+    padding-right: 2rem;
+    // Using padding instead of margin keep the bounding box
+    padding-bottom: 4px;
+  }
+
+  .linkbox {
+    @include easing(300ms);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a:hover,
+  a.is-active { transform: translateX(2rem); }
+}

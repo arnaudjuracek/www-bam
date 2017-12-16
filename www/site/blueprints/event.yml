@@ -1,0 +1,41 @@
+title: Événement
+icon: calendar-o
+
+options:
+  preview: false
+  status: true
+  template: true
+  url: true
+  delete: true
+
+pages:
+  template: article
+files: false
+
+fields:
+  previewfiles:
+    type: previewfiles
+
+  title:
+    label: Titre
+    type:  text
+
+  date:
+    required: true
+    label: Date
+    type: date
+    format: DD/MM/YYYY
+    width: 1/2
+
+  tags:
+    label: Tags
+    type: tags
+    width: 1/2
+
+  metas: metas
+
+  description:
+    label: Description
+    type: textarea
+    validate:
+      maxLength: 300

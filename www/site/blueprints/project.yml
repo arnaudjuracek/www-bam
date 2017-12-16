@@ -14,12 +14,16 @@ pages:
       uid: resume
       template: article
       num: 1
-    - title: Historique
-      uid: historique
+    - title: Détails
+      uid: details
       template: article
       num: 2
 
-files: true
+files:
+  fields:
+    focus:
+      label: Point de focus
+      type: focus
 
 fields:
   previewfiles:
@@ -32,6 +36,9 @@ fields:
   cover:
     label: Photo de couverture
     type: image
+    required: true
+
+  metas: metas
 
   description:
     label: Description

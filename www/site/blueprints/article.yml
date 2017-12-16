@@ -10,7 +10,11 @@ options:
   delete: true
 
 pages: false
-files: true
+files:
+  fields:
+    focus:
+      label: Point de focus
+      type: focus
 
 fields:
   previewfiles:
@@ -19,8 +23,6 @@ fields:
   title:
     label: Titre
     type:  text
-
-  metas: metas
 
   abstract:
     label: Résumé

@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 <?php snippet('sidebar', [
-  'force' => $page,
+  'hijack_sidebar' => $page,
   'metas' => [
     $page->role() ? str_replace(',', '&nbsp;- ', $page->role()->value()) : '',
     $page->job() ? str_replace(',', '&nbsp;- ', $page->job()->value()) : '',
@@ -28,8 +28,7 @@
   <aside class="outside outside-footnotes">
     <ul class="metas">
       <?php foreach ($page->metas()->toStructure() as $meta): ?>
-        <li class="meta">
-          <?php snippet('icons/' . $meta->icon()) ?>
+        <li class="meta" <?php ecco($meta->label()->isNotEmpty(), 'data-label="' . $meta->label() . '"') ?>>
           <?php echo $meta->value()->kirbytext() ?>
         </li>
       <?php endforeach ?>

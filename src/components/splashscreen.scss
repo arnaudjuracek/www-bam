@@ -13,53 +13,46 @@ $timeline: (
     left: 0;
     right: 0;
     @media (min-width: breakpoint(tablet)) { padding-left: 0; }
-    .links {
-      margin: 0 auto;
-      line-height: 0;
-      .link {
-        opacity: 0;
-        margin-bottom: 3rem;
 
-        &:hover { @include applyTheme(svg, stroke); }
+    @for $i from 0 through 20 {
+      .link:nth-of-type(#{$i}) {
+        animation: fallIn #{duration(icons)}ms ease forwards;
+        animation-delay: #{$i * 100}ms;
+
         .link-icon {
-          margin: 0 auto;
-          padding-bottom: 2rem;
-          line-height: 0;
-
-          width: 4rem;
-          stroke-width: 0.5rem;
-          svg { @include easing(300ms, stroke); }
+          stroke-dasharray: 0 1000;
+          animation: dash #{duration(icons)}ms ease-in forwards;
+          animation-delay: #{delay(icons) + $i * 100}ms;
         }
       }
+    }
 
-      @for $i from 0 through 20 {
-        .link:nth-of-type(#{$i}) {
-          animation: fallIn #{duration(icons)}ms ease forwards;
-          animation-delay: #{$i * 100}ms;
+    @media (min-width: breakpoint(phone)) {
+      @include menu-icons();
+    }
 
-          .link-icon {
-            stroke-dasharray: 0 1000;
-            animation: dash #{duration(icons)}ms ease-in forwards;
-            animation-delay: #{delay(icons) + $i * 100}ms;
-          }
-        }
-      }
+    @media (max-width: breakpoint(phone)) {
+      @include menu-app();
+      border-top: none;
     }
   }
 
   .splashscreen-logo {
-    $size: 10vmax;
-
-    // animation: fallIn 1000ms ease forwards;
-    // animation-delay: 0;
-
     position: fixed;
+
+    $size: 10vmax;
     top: calc(45% - #{$size / 2});
     left: calc(50% - #{$size / 2});
-
     width: $size;
-    height: auto;
 
+    @media (max-width: breakpoint(phone)) {
+      $size: 30vmax;
+      top: calc(45% - #{$size / 2});
+      left: calc(50% - #{$size / 2});
+      width: $size;
+    }
+
+    height: auto;
     line-height: 0;
 
     img {
@@ -81,6 +74,10 @@ $timeline: (
     margin: 0 auto;
     bottom: 20%;
 
+    @media (max-width: breakpoint(phone)) {
+      bottom: calc(50% - 20vmax);
+    }
+
     font-size: 1.6rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -100,6 +97,10 @@ $timeline: (
         animation: fallIn #{duration(footer)}ms ease forwards;
         animation-delay: #{delay(footer) + $i * 100}ms;
       }
+    }
+
+    @media (max-width: breakpoint(phone)) {
+      display: none;
     }
   }
 }
