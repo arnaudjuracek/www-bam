@@ -19,7 +19,11 @@ pages:
       template: article
       num: 2
 
-files: true
+files:
+  fields:
+    focus:
+      label: Point de focus
+      type: focus
 
 fields:
   previewfiles:
