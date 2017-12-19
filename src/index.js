@@ -17,7 +17,7 @@ window.addEventListener('load', blazy.revalidate)
 
 Gallery({ class: 'gallery' })
 
-Zoom(document.querySelectorAll('article img'), {
+Zoom(document.querySelectorAll('figure:not(.no-click) img'), {
   background: '#FFF',
   margin: 10,
   scrollOffset: 1
