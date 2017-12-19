@@ -12,21 +12,28 @@ fields:
     label: Facebook
     type: url
     icon: facebook
-    width: 1/3
+    width: 1/2
     placeholder: https://facebook.com/account
 
   twitter:
     label: Twitter
     type: url
     icon: twitter
-    width: 1/3
+    width: 1/2
     placeholder: https://twitter.com/account
+
+  instagram:
+    label: Instagram
+    type: url
+    icon: instagram
+    width: 1/2
+    placeholder: https://www.instagram.com/account
 
   linkedin:
     label: Linkedin
     type: url
     icon: linkedin
-    width: 1/3
+    width: 1/2
     placeholder: https://linkedin.com/in/account
 
   description:
