@@ -10,7 +10,7 @@ options:
 icon: file-code-o
 
 pages: false
-files: false
+files: true
 
 fields:
   title:

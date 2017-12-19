@@ -26,14 +26,16 @@ body {
 
 figure {
   line-height: 0;
-  width: 100%;
-  &.is-forced-ratio {
+  display: inline-block;
+  &.is-full-width {
+    background: white;
+    display: block;
     padding: 0;
     height: 0;
     overflow: hidden;
+    width: 100%;
   }
   &.lazyload {
-    background: white;
     img {
       opacity: 0;
       &.is-loaded {
@@ -44,8 +46,10 @@ figure {
   }
 
   img {
-    width: 100%;
-    height: auto;
+    &:not([width]):not([height]) {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -93,7 +97,7 @@ article {
     font-size: 1.8rem;
   }
 
-  figure {
+  figure.is-full-width {
     margin-bottom: 1em;
     img {
       $frame-width: 1rem;
@@ -215,6 +219,11 @@ article.article-member {
     margin-bottom: 2rem;
     figure {
       width: calc(50% - 4rem);
+      img {
+        $frame-width: 1rem;
+        outline: $frame-width solid white;
+        outline-offset: -$frame-width;
+      }
       @media (max-width: breakpoint(phone)) {
         width: 100%;
       }

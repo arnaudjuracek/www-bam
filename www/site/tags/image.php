@@ -85,8 +85,10 @@ kirbytext::$tags['image'] = [
 
     // force ratio to avoid page reflow
     // SEE http://dinbror.dk/blog/blazy/?ref=example-page#Responsive
-    $figure->attr('style', 'padding-bottom: ' . (1 / $ratio) * 100 . '%');
-    $figure->addClass('is-forced-ratio');
+    if (!$tag->attr('width') && !$tag->attr('height')) {
+      $figure->addClass('is-full-width');
+      $figure->attr('style', 'padding-bottom: ' . (1 / $ratio) * 100 . '%');
+    }
 
     $figure->addClass($tag->attr('class'));
     $figure->append($image);

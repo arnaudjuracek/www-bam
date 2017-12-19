@@ -10,7 +10,10 @@
   .gallery-item {
     .gallery-media {
       display: inline-block;
-      margin: 0;
+
+      figure {
+        display: block;
+      }
     }
   }
 }
