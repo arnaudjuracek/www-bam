@@ -9,6 +9,7 @@ Kirby Configuration
 */
 
 c::set([
+  'ssl'                        => true,
   'widget.backup.include_site' => true,
   'plugin.footnotes.scroll'    => false,
   'panel.kirbytext'            => true,
