@@ -27,6 +27,7 @@
 
       .preview-event-cover-content {
         position: absolute;
+        padding: 1rem;
         text-align: center;
         width: 100%;
         top: 50%;
@@ -39,6 +40,7 @@
       }
 
       .preview-event-tag {
+        line-height: 1em;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -119,6 +121,7 @@
         &::before { display: none; }
         .preview-event-cover-content {
           position: relative;
+          padding: 0;
           text-align: left;
           transform: none;
           line-height: 1.2em;

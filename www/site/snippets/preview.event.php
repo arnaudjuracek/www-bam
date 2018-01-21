@@ -6,7 +6,7 @@
           <?php echo $page->date('d/m/Y') ?>
         </time>
         <div class="preview-event-tag">
-          <?php echo $page->tags()->html() ?>
+          <?php echo str_replace(',', ', ', $page->tags()) ?>
         </div>
       </div>
     </div>
