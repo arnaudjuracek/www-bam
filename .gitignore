@@ -76,3 +76,4 @@ www/site/plugins/focus
 www/site/plugins/footnotes
 www/site/widgets/kirby-backup-widget
 # </KirbyWebpack>
+www/content/
