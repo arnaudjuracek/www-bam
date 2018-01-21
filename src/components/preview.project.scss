@@ -30,6 +30,7 @@
     border: none;
 
     .preview-project-cover {
+      width: 100%;
       img {
         @include easing(300ms, filter);
         filter: grayscale(1);
@@ -42,6 +43,7 @@
       // see also remote-description component
       .preview-project-title {
         font-size: 2rem;
+        line-height: 1em;
         margin: 2rem 0;
         text-transform: uppercase;
       }
