@@ -47,7 +47,8 @@ c::set([
       }
     ),
     array(
-      // Hijack sidebar when inside a project
+      // Hijack sidebar when inside a project,
+      // Hijack article metas with project metas
       'pattern' => 'projets/(:any)/(:any)/(:all)',
       'action'  => function ($folder, $uid, $sub) {
         $project = page('projets/' . $folder . '/' . $uid);
@@ -56,6 +57,7 @@ c::set([
         $page = $project->find($sub);
         if (!$page) return go('erreur');
 
+        $page->metas = $project->metas();
         site()->visit($page);
         return [$page, ['hijack_sidebar' => $project]];
       }

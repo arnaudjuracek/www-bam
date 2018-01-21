@@ -37,12 +37,6 @@
               <?php foreach ($metas as $meta) : ?>
                 <li class="sidebar-meta"><?php echo widont($meta) ?></li>
               <?php endforeach ?>
-            <?php elseif (isset($hijack_sidebar)) : ?>
-              <?php foreach ($p->metas()->toStructure() as $meta) : ?>
-                <li class="sidebar-meta" <?php ecco($meta->label()->isNotEmpty(), 'data-label="' . $meta->label() . '"') ?>>
-                  <?php echo $meta->value()->kirbytext() ?>
-                </li>
-              <?php endforeach ?>
             <?php endif ?>
           </ul>
         <?php endif ?>
