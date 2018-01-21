@@ -118,6 +118,16 @@
 
 // -------------------------------------------------------------------------
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// -------------------------------------------------------------------------
+
 // this class prevents scroll bounce on osx
 html.no-bounce {
   overflow: hidden;
