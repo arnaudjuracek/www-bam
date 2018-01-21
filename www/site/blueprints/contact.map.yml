@@ -32,10 +32,3 @@ fields:
     fields:
       value:
         label: Texte
-
-  address:
-    required: true
-    label: Adresse
-    type: text
-    icon: map-marker
-    help: Ce champ sera utilisé par Google Map
