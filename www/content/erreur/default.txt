@@ -1,11 +1,11 @@
-Title: Erreur
+Title: Error 404
 
 ----
 
 Text: 
 
-# La page demandée est introuvable.
-
+#La page demandée est introuvable.
+(image:404-collectif-bam.gif)
 [Revenir à l'accueil](/).
 
 ----

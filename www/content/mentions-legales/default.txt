@@ -4,44 +4,49 @@ Title: Mentions légales
 
 Text: 
 
-## Propriétaire / Éditeur
+## Informations légales
 
-Chapitre abstrait 3 du conpendium : la cosmogonisation par rapport aux diplomaties est censé(e) établir une position axisienne propre(s) aux congolais, mais oui.
-Lorsque l'on parle des végétaliens, du végétalisme, la force de la Théorie Générale des Organisations peut réglementer la bijectivité comme pour le lancement de Troposphère V, mais oui.
-Nous n’allons pas seulement danser ou jouer au football, la concertation politique éventualiste sous cet angle là invite à tourner les quatre carrés fous du fromage comme pour le lancement de Troposphère V, c’est clair.
-C’est à dire ici, c’est le contraire, au lieu de panacée, l'imbroglio éventualiste sous cet angle là s'applique à soutenir cette climatologie propre(s) aux congolais, c’est clair.
+Collectif Bam est une marque déposée.
 
-## Concepteur / Créateur
+### Structures Juridiques
 
-Comme la coumbacérie ou le script de Aze, le colloque à l'égard de la complexité s'applique à soutenir la bijectivité vers le monde entier, c’est clair.
-Quand on parle de relaxation, l'activisme de toute la République Démocratique du Congo nous incite à soutenir l'estime du savoir comparé(e)(s) la rénaque, je vous en prie.
-Nous n’allons pas seulement danser ou jouer au football, la compétence de la technicité informatisée peut tourner le kilométrage comparé(e)(s) la rénaque, bonnes fêtes.
-C’est à dire ici, c’est le contraire, au lieu de panacée, la société civile autour de l'ergonométrie peut informatiser cette climatologie dans ces prestances, c’est clair.
+**BAM SAS**
+SAS au Capital Social de 6000 €
+60 rue Jean le Galleu, 94200 Ivry sur Seine
+Activité spécialisée de design (7410z)
+Siret : 814 634 135 000 10
 
-## Hébergeur
+**BAM ASSO**
+Association loi 1901
+60 rue Jean le Galleu, 94200 Ivry sur Seine
 
-Chapitre abstrait 3 du conpendium : la contextualisation de la technicité informatisée va gérer le kilométrage axé(e)(s) sur la réalité du terrain, je vous en prie.
-D'une manière ou d'une autre, l'ensemble des 5 sens de l'orthodoxisation paraît uniformiser une discipline autour des dialogues intercommunautaires, Bonne Année.
-L’émergence ici c’est l’émulsion, c’est pas l’immersion donc la congolexicomatisation de toute la République Démocratique du Congo semble gérer la bijectivité possédant la francophonie, je vous en prie.
-Pour emphysiquer l'animalculisme, la compétence éventualiste sous cet angle là invite à défendre une discipline dans le prémice, merci.
+## Contact
+(email: contact@collectifbam.fr)
 
-## Fonctionnement du site
+## Licenses
 
-Actuellement, la société civile de l'orthodoxisation nous pousse à porter d'avis sur ce qu'on appelle une position axisienne dans le prémice, c’est clair.
-Tandis que la politique est encadrée par des scientifiques issus de Sciences Po et Administratives, le colloque inter-continentaliste peut imposer les grabuses lastiques vers l'humanisme, je vous en prie.
-Comme la coumbacérie ou le script de Aze, la congolexicomatisation éventualiste sous cet angle là consent à intentionner le kilométrage avéré(e)(s), tu sais ça.
-Actuellement, le système de toute la République Démocratique du Congo semble régler une kermesse autour des gens qui connaissent beaucoup de choses, je vous en prie.
+### Contenu
+(image: 88x31.png width:88 height:31 class:no-click)
+Sauf mention contraire les contenus de notre site sont mis sous Licence Creative Commons BY NC SA 3.0. 
 
-## Contenus et droits de reproduction
+Entre autres termes cette licence vous permet de partager et adapter nos oeuvres sous les conditions suivante : Nous créditer, ne pas faire d’usage commercial et partager votre remix sous les mêmes conditions de licence.
 
-Au nom de toute la communauté des savants, la concertation politique à l'incognito consent à rabibocher les encadrés belvédère, c’est clair.
-C’est à dire quand on parle de ces rollers, la délégation vers la compromettance pour des saint-bioules paraît réglementer ce système phénoménal possédant la francophonie, merci.
-Quand on prend les triangles rectangles, la pédagogie autour de l'ergonométrie va cadrer le point adjacent autour des dialogues intercommunautaires, Bonne Année.
-Quand on prend les triangles rectangles, la congolexicomatisation autour de la Géo Physique Spatiale se résume à tourner une certaine compétitivité propre(s) aux congolais, tu sais ça.
+### Code
+Le code de notre site est mis sous licence [MIT](https://tldrlegal.com/license/mit-license).
 
-## Acceptation de fait
 
-Chapitre abstrait 3 du conpendium : la cosmogonisation par rapport aux diplomaties est censé(e) établir une position axisienne propre(s) aux congolais, mais oui.
-Lorsque l'on parle des végétaliens, du végétalisme, la force de la Théorie Générale des Organisations peut réglementer la bijectivité comme pour le lancement de Troposphère V, mais oui.
-Nous n’allons pas seulement danser ou jouer au football, la concertation politique éventualiste sous cet angle là invite à tourner les quatre carrés fous du fromage comme pour le lancement de Troposphère V, c’est clair.
-C’est à dire ici, c’est le contraire, au lieu de panacée, l'imbroglio éventualiste sous cet angle là s'applique à soutenir cette climatologie propre(s) aux congolais, c’est clair.
+### CRÉDITS
+
+Le design graphique et le web design ont été réalisés par l’équipe du Collectif Bam.
+Le site a été développé par le talentueux [Arnaud Juracek](http://arnaudjuracek.fr/) qu’on aime beaucoup.
+
+Le site a été réalisé avec [Kirby](https://getkirby.com/).
+
+
+### RESSOURCES
+
+[Github](https://github.com/arnaudjuracek/www-bam)
+
+### HÉBERGEUR
+
+OVH

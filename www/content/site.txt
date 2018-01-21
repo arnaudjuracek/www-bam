@@ -6,7 +6,7 @@ Facebook: https://www.facebook.com/BamActu/
 
 ----
 
-Twitter: https://twitter.com/CollectifBam
+Twitter: https://twitter.com/collectifbam
 
 ----
 
@@ -14,11 +14,11 @@ Linkedin: https://www.linkedin.com/company/collectif-bam
 
 ----
 
-Description: Le Collectif Bam est un groupe de designers engagés sur les pratiques numériques et collaboratives. Nous concevons des produits, des services, des espaces...
+Description: Le Collectif Bam est un groupe de designers engagés sur la révolution numérique et et la transition écologique.
 
 ----
 
-Keywords: design,collectif bam
+Keywords: design,collectif bam,designers,numérique,écologie,transition,collectif designers
 
 ----
 
@@ -27,3 +27,7 @@ Subtitle:
 ----
 
 Footer: **Collectif Bam** – Sauf mention contraire les contenus sont mis sous [Licence Creative Commons BY NC SA](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/)  – [Mentions légales](/mentions-legales)
+
+----
+
+Instagram: https://www.instagram.com/collectifbam/
