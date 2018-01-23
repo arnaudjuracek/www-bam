@@ -102,7 +102,7 @@ article {
     img {
       $frame-width: 1rem;
       outline: $frame-width solid white;
-      outline-offset: -$frame-width;
+      outline-offset: -($frame-width - 0.1rem);
     }
   }
 
