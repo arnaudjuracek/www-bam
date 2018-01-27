@@ -149,7 +149,7 @@
       padding-top: 3rem;
       @include themable(background);
       .social-link svg {
-        stroke: color(background);
+        fill: color(background);
       }
     }
   }

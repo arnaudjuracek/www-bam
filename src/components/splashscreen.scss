@@ -99,6 +99,10 @@ $timeline: (
       }
     }
 
+    svg {
+      opacity: 0.8;
+    }
+
     @media (max-width: breakpoint(phone)) {
       display: none;
     }
