@@ -33,7 +33,7 @@
       width: 100%;
       img {
         @include easing(300ms, filter);
-        filter: grayscale(1);
+        @media (min-width: breakpoint(tablet)) { filter: grayscale(1); }
         width: 100%;
         height: auto;
       }
