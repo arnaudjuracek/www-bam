@@ -1,5 +1,5 @@
 <ul class="social-links">
-  <li class="social-link">
+  <li class="social-link <?php ecco(page('contact')->isOpen() || page('contact')->isActive() , 'is-active') ?>">
     <a href="<?php echo page('contact')->url() ?>">
       <?php snippet('icons/contact_fill') ?>
     </a>
