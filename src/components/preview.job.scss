@@ -7,16 +7,17 @@
   background: white;
 
   .preview-job-container {
-    display: flex;
-
     width: 100%;
     height: 100%;
     padding: 1rem;
     border: none;
 
     .preview-job-cover {
+      float: left;
+      margin-bottom: 1rem;
+      @include clearfix;
+
       position: relative;
-      flex: none;
       width: 33.33%;
       height: 0;
       padding-bottom: 33.33%;
@@ -26,6 +27,7 @@
 
       .preview-job-cover-content {
         position: absolute;
+        padding: 1rem;
         text-align: center;
         width: 100%;
         top: 50%;
@@ -38,6 +40,7 @@
       }
 
       .preview-job-tag {
+        line-height: 1em;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -95,11 +98,14 @@
 
 @media (max-width: breakpoint(phone)) {
   .preview-job {
+    margin-bottom: 2rem;
     .preview-job-container {
       flex-direction: column;
 
       .preview-job-cover {
+        float: none;
         width: 100%;
+        height: auto;
         border: none;
         border-bottom: 2px solid;
         padding-bottom: 1rem;
@@ -108,6 +114,7 @@
         &::before { display: none; }
         .preview-job-cover-content {
           position: relative;
+          padding: 0;
           text-align: left;
           transform: none;
           line-height: 1.2em;
