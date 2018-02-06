@@ -46,9 +46,9 @@
 
       .sidebar-icon-back-arrow {
         position: absolute;
+        left: calc(-50% - 2px);
         height: 100%;
         @include easing(300ms, transform);
-        transform: translateX(calc(-200% + 2px));
         svg {
           padding: 1px;
           height: 100%;
@@ -57,7 +57,7 @@
       }
 
       &:hover .sidebar-icon-back-arrow {
-        transform: translateX(calc(-225% + 2px));
+        transform: translateX(-0.5rem);
       }
     }
 
