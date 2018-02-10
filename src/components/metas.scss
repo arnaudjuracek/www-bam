@@ -21,4 +21,13 @@
       font-variant: small-caps;
     }
   }
+
+
+  @media (max-width: breakpoint(desktop)) {
+    // Target :last-child instead of .metas container allows to target
+    // only non-empty .metas containers
+    .meta:last-child {
+      padding-bottom: 4rem;
+    }
+  }
 }
