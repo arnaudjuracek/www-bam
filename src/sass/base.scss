@@ -141,16 +141,7 @@ article {
     margin-bottom: 1em;
   }
 
-  blockquote {
-    p {
-      font-family: 'Assistant', sans-serif;
-      line-height: 1.5em;
-      font-style: italic;
-      i, em {
-        font-style: normal;
-      }
-    }
-  }
+  blockquote { padding-left: 2rem; }
 
   code {
     // Github style
