@@ -22,11 +22,11 @@ export default function (opts) {
     const initialY = pusher && pusher.clientHeight > 0 ? pusher.clientHeight + opts.offy + opts.margin : 0
     let nextMinY = initialY
 
-    footnotes.forEach(el => {
+    footnotes.forEach((el, index) => {
       const backrefID = opts.backrefNotation.replace('%v', el.value)
       const backref = document.getElementById(backrefID)
 
-      let y = backref.offsetTop + opts.offy
+      let y = backref.offsetParent.offsetTop + opts.offy
       if (y < nextMinY) y = nextMinY
 
       el.style.position = 'absolute'
