@@ -22,7 +22,7 @@ export default function (opts) {
     const initialY = pusher && pusher.clientHeight > 0 ? pusher.clientHeight + opts.offy + opts.margin : 0
     let nextMinY = initialY
 
-    footnotes.forEach((el, index) => {
+    footnotes.forEach(el => {
       const backrefID = opts.backrefNotation.replace('%v', el.value)
       const backref = document.getElementById(backrefID)
 
@@ -37,6 +37,13 @@ export default function (opts) {
       el.classList.remove('is-loading')
       el.classList.add('is-loaded')
     })
+
+    // Force <main> to be as tall as the footnote container.
+    // This allows a sticky footer to sticky to the bottom of the page if the footnotes
+    // go below <main>.
+    const main = document.querySelector('main')
+    const footnotesContainerHeight = nextMinY + 65
+    if (footnotesContainerHeight > main.clientHeight) main.style.minHeight = footnotesContainerHeight + 'px'
   }
 }
 

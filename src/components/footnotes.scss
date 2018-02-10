@@ -11,10 +11,12 @@
     }
 
     &.is-loaded {
-      @include easing(300ms);
-      transition-property: opacity, transform;
-      opacity: 1;
-      transform: none;
+      @media (min-width: breakpoint(desktop)) {
+        @include easing(300ms);
+        transition-property: opacity, transform;
+        opacity: 1;
+        transform: none;
+      }
     }
   }
 
