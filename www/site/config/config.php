@@ -14,6 +14,10 @@ c::set([
   'typography.quotes.primary'             => 'doubleGuillemetsFrench',
   'typography.quotes.secondary'           => 'doubleCurled',
   'typography.hyphenation.language'       => 'fr',
+  'typography.hyphenation.minlength'      => 9,
+  'typography.hyphenation.titlecase'      => false,
+  'typography.hyphenation.allcaps'        => false,
+  'typography.hyphenation.compounds'        => false
 ]);
 
 c::set([
