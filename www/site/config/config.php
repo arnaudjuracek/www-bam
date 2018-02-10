@@ -17,18 +17,17 @@ c::set([
   'typography.hyphenation.minlength'      => 9,
   'typography.hyphenation.titlecase'      => false,
   'typography.hyphenation.allcaps'        => false,
-  'typography.hyphenation.compounds'        => false
-]);
+  'typography.hyphenation.compounds'      => false,
 
-c::set([
   'ssl'                        => true,
   'widget.backup.include_site' => true,
   'plugin.footnotes.scroll'    => false,
   'panel.kirbytext'            => true,
+  'smartypants'                => true,
+  'markdown.extra'             => true,
+
   'error'                      => 'erreur',
   'cache.ignore'               => 'sitemap',
-
-
   'routes' => [
     array(
       // Redirect all top pages (except events and sandbox) to their first child
