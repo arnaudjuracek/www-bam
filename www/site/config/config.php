@@ -9,6 +9,14 @@ Kirby Configuration
 */
 
 c::set([
+  'typography.punctuation.spacing.french' => true,
+  'typography.dashes.style'               => 'em',
+  'typography.quotes.primary'             => 'doubleGuillemetsFrench',
+  'typography.quotes.secondary'           => 'doubleCurled',
+  'typography.hyphenation.language'       => 'fr',
+]);
+
+c::set([
   'ssl'                        => true,
   'widget.backup.include_site' => true,
   'plugin.footnotes.scroll'    => false,
