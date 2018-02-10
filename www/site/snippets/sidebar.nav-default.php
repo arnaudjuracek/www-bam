@@ -6,7 +6,11 @@
     </a>
   </li>
 
-  <?php if ($isActive): ?>
+  <?php
+    // Don't display TOC on first page item
+    // See https://github.com/arnaudjuracek/www-bam/issues/10
+    if ($isActive && $child->num() > 1):
+  ?>
     <?php echo $page->text()->toc(1) ?>
   <?php endif ?>
 <?php endforeach ?>
