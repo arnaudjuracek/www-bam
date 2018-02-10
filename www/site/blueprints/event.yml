@@ -38,4 +38,4 @@ fields:
     label: Description
     type: textarea
     validate:
-      maxLength: 300
+      maxLength: 400
