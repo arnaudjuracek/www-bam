@@ -3,7 +3,9 @@
 
   display: block;
   border: 1px solid;
-  padding: 0.5rem calc(4px + 1.5ch);
+
+  padding: 0.5rem 0;
+  padding-left: calc(4px + 1.5ch);
 
   color: inherit;
   text-decoration: none;
