@@ -15,9 +15,9 @@
 
     if (!function_exists('build')) {
       function build ($entry, $maxLevel, $level = 0) {
-        if ($level++ > $maxLevel) return;
+        if ($level > $maxLevel) return;
 
-        if (!is_array($entry) && $entry->text) {
+        if (!is_array($entry) && strlen($entry->text) > 0) {
           $li = brick('li');
           $a = brick('a', $entry->text, [
             'class' => 'linkbox',
@@ -29,9 +29,8 @@
         } else {
           $ul = brick('ul');
           foreach ($entry as $sub_entry) {
-            $li = brick('li');
-            $ul->append(build($sub_entry, $maxLevel, $level));
-            $ul->append($li);
+            $sub = build($sub_entry, $maxLevel, ++$level);
+            if ($sub) $ul->append($sub);
           }
           return $ul;
         }
@@ -42,6 +41,7 @@
     foreach ($toc as $firstLevelEntry) {
       $li = brick('li');
       $li->append(build($firstLevelEntry, $maxLevel));
+      // $li = build($firstLevelEntry, $maxLevel);
       $html->append($li);
     }
 
