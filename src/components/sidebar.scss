@@ -163,13 +163,23 @@
 @mixin sidebar-swipable () {
   @include easing(300ms, transform);
   will-change: transform;
-  transform: translateX(calc(-100% + 1rem));
+  transform: translateX(calc(-100% + 1.5rem));
 
   // Extend the hitbox to prevent weird :hover effect
   left: 0rem;
   border-left: 1rem solid color(background);
 
   &:hover { transform: none; }
+  &::after {
+    @include themable(background);
+    content:'\2630';
+    font-size: 2rem;
+    position: absolute;
+    top: 20.7rem;
+    right: 0;
+    transform: translateX(50%) translateY(-50%);
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  }
 }
 
 @mixin sidebar-compact () {
