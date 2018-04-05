@@ -90,6 +90,7 @@
       line-height: 1.2em;
 
       padding-top: 1.5rem;
+      width: 100%;
       @include emdash(1.5rem, 0, 2.8rem);
 
       &[data-label]::before {
