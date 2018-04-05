@@ -148,7 +148,13 @@ article {
     margin-bottom: 1em;
   }
 
-  blockquote { padding-left: 2rem; }
+  blockquote {
+    p { font-size: 2.1rem; }
+    font-style: italic;
+    i, em {
+      font-style: normal;
+    }
+  }
 
   code {
     // Github style
