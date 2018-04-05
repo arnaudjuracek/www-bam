@@ -1,6 +1,6 @@
 {
   "name": "www-bam",
-  "version": "1.6.6",
+  "version": "1.6.7",
   "description": "https://collectifbam.fr/",
   "main": "index.js",
   "scripts": {
