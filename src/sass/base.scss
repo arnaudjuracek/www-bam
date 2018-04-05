@@ -227,9 +227,9 @@ article.article-member {
     figure {
       width: calc(50% - 4rem);
       img {
-        $frame-width: 1rem;
+        $frame-width: 0.9rem;
         outline: $frame-width solid white;
-        outline-offset: -$frame-width;
+        outline-offset: -($frame-width - 0.1rem);
       }
       @media (max-width: breakpoint(phone)) {
         width: 100%;
