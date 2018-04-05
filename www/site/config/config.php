@@ -104,3 +104,21 @@ c::set([
     )
   ]
 ]);
+
+
+/*
+---------------------------------------
+Set session validity to 30 days
+---------------------------------------
+*/
+
+// @SEE https://forum.getkirby.com/t/login-session-lifetime-extending-for-the-frontend/2922/3
+// @SEE https://github.com/jenstornell/kirby-secrets/wiki/Fingerprint
+c::set([
+  'panel.session.timeout' => 60 * 24 * 30,
+  'panel.session.lifetime' => 60 * 24 * 30
+]);
+s::$timeout =  60 * 24 * 30;
+s::$cookie['lifetime'] = 0;
+s::$fingerprint = function () { return sha1(Visitor::ua()); };
+
