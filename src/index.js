@@ -8,6 +8,7 @@ import TocHighlighter from './components/toc'
 import Footnotes from './components/footnotes'
 import RemoteDescription from './components/remote-description'
 import Gallery from './components/gallery'
+import MenuMobile from './components/menu-mobile'
 
 const blazy = new Blazy({
   selector: 'figure.lazyload img',
@@ -21,6 +22,11 @@ Zoom(document.querySelectorAll('article figure:not(.no-click) img'), {
   background: '#FFF',
   margin: 10,
   scrollOffset: 1
+})
+
+MenuMobile({
+  selector: '.menu-mobile-links-category',
+  class: 'is-open'
 })
 
 if (!MOBILE) {

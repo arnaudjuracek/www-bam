@@ -35,6 +35,9 @@
       }
     }
   }
+
+  .menu-mobile-toggle,
+  .menu-mobile-toggle-label { display: none; }
 }
 
 // These mixins allow layout-control of this component via layout.scss
@@ -58,35 +61,6 @@
         stroke-width: 0.5rem;
         svg { @include easing(300ms, stroke); }
       }
-    }
-  }
-}
-
-@mixin menu-app () {
-  top: initial;
-  bottom: 0;
-  height: 5.25rem;
-  padding: 1rem 2rem;
-
-  border: none;
-  border-top: 2px solid;
-  background: color(background);
-  @include themable(border-color);
-
-  pointer-events: auto;
-
-  .links {
-    line-height: 0;
-    .link-text { display: none; }
-    .link-icon {
-      display: block;
-      width: 3rem!important;
-      svg {
-        stroke-width: 0.5rem;
-      }
-    }
-    .is-active .link-icon svg {
-      @include themable(stroke);
     }
   }
 }

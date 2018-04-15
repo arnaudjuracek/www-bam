@@ -84,8 +84,8 @@
 
 // -------------------------------------------------------------------------
 
-@mixin easing ($duration: 100ms, $property: all){
-  transition: $property $duration cubic-bezier(0.250, 0.100, 0.250, 1.000);
+@mixin easing ($duration: 100ms, $property: all, $ease: cubic-bezier(0.250, 0.100, 0.250, 1.000)){
+  transition: $property $duration $ease;
 }
 
 // -------------------------------------------------------------------------

@@ -9,6 +9,10 @@ $timeline: (
 @function duration ($key) { @return nth(map-get($timeline, $key), 2); }
 
 .splashscreen {
+  .menu-mobile-toggle-label {
+    color: color(text);
+  }
+
   .menu {
     left: 0;
     right: 0;
@@ -31,10 +35,11 @@ $timeline: (
       @include menu-icons();
     }
 
-    @media (max-width: breakpoint(phone)) {
-      @include menu-app();
-      border-top: none;
-    }
+    // WIP
+    // @media (max-width: breakpoint(phone)) {
+    //   @include menu-app();
+    //   border-top: none;
+    // }
   }
 
   .splashscreen-logo {

@@ -1,3 +1,5 @@
+<?php snippet('menu.mobile') ?>
+
 <nav class="menu" role="main">
   <ul class="links">
     <?php foreach ($pages->visible() as $item) : ?>

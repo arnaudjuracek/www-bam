@@ -44,10 +44,11 @@ nav.menu {
       min-width: 100%;
     }
   }
+}
 
-  @media (max-width: breakpoint(phone)) {
-    @include menu-app();
-  }
+@media (max-width: breakpoint(phone)) {
+  .menu { display: none; }
+  .menu-mobile-toggle-label { display: block; }
 }
 
 main {
@@ -70,7 +71,8 @@ main {
   }
 
   @media (max-width: breakpoint(phone)) {
-    top: 6rem;
+    position: relative;
+    top: 0;
     padding: 2rem;
     padding-bottom: 6rem;
     max-width: 100vw;
