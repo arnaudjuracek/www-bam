@@ -3,7 +3,7 @@
   display: inline-block;
 
   @media (min-width: breakpoint(tablet)) { @include grid(4, $margin); }
-  @media (max-width: breakpoint(tablet)) { @include grid(3, $margin); }
+  @media (min-width: breakpoint(phone)) and (max-width: breakpoint(tablet)) { @include grid(3, $margin); }
   @media (max-width: breakpoint(phone)) { @include grid(2, $margin); }
 
   margin-right: $margin;
