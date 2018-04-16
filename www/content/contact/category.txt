@@ -2,4 +2,4 @@ Title: Contact
 
 ----
 
-Description: Vous souhaitez nous rencontrer, nous écrire, contactez nous.
+Description: Vous souhaitez nous rencontrer, nous écrire, contactez-nous.

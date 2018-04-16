@@ -8,7 +8,13 @@ const defaultOpts = {
 export default function (opts) {
   opts = Object.assign({}, defaultOpts, opts || {})
   window.addEventListener('load', () => {
-    const categories = document.querySelectorAll(opts.selector)
+    let categories = document.querySelectorAll(opts.selector)
+
+    if (!categories || !categories.length) return
+
+    // iOS hack
+    if (!categories.forEach) categories = [...categories]
+
     categories.forEach(cat => {
       const clone = cat.cloneNode(true)
       clone.classList.add(opts.class)
@@ -21,6 +27,7 @@ export default function (opts) {
       cat.style.setProperty('--height', height + 'px')
 
       cat.addEventListener('click', () => {
+        console.log(cat)
         categories.forEach(c => c.classList && c.classList.contains(opts.class) && c.classList.remove(opts.class))
 
         if (!cat) return

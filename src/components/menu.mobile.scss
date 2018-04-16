@@ -92,7 +92,7 @@
           margin-right: 1rem;
           svg {
             height: 3rem;
-            width: auto;
+            width: 3rem;
             padding: 1px;
             fill: none;
             stroke-width: 6px;
@@ -151,5 +151,10 @@
     bottom: 0;
     padding: 2rem;
     background: color(background);
+
+    svg {
+      // iOS support
+      width: 3rem !important;
+    }
   }
 }

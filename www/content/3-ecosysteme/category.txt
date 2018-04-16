@@ -10,4 +10,4 @@ Text:
 
 ----
 
-Description: Découvrez avec qui nous travaillons.
+Description: Qui sommes-nous et avec qui travaillons-nous ?

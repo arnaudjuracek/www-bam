@@ -34,12 +34,6 @@ $timeline: (
     @media (min-width: breakpoint(phone)) {
       @include menu-icons();
     }
-
-    // WIP
-    // @media (max-width: breakpoint(phone)) {
-    //   @include menu-app();
-    //   border-top: none;
-    // }
   }
 
   .splashscreen-logo {
@@ -72,7 +66,7 @@ $timeline: (
     animation: fallIn #{duration(baseline)}ms ease forwards;
     animation-delay: #{delay(baseline)}ms;
 
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     text-align: center;

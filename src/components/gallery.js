@@ -2,9 +2,10 @@
 
 const defaultOpts = {
   selector: 'ul li figure',
-  class: 'gallery',
+  class: 'gallery'
 }
 
+/* global Element */
 // Element.closest polyfill
 // SEE https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
 
@@ -27,7 +28,10 @@ if (!Element.prototype.closest) {
 export default function (opts) {
   opts = Object.assign({}, defaultOpts, opts || {})
 
-  const medias = document.querySelectorAll(opts.selector)
+  let medias = document.querySelectorAll(opts.selector)
+  if (!medias || !medias.length) return
+  if (!medias.forEach) medias = [...medias]
+
   medias.forEach(media => {
     const li = media.closest('li')
     if (li) {

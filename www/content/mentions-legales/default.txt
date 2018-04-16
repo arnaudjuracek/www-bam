@@ -10,43 +10,41 @@ Collectif Bam est une marque déposée.
 
 ### Structures Juridiques
 
-**BAM SAS**
-SAS au Capital Social de 6000 €
-60 rue Jean le Galleu, 94200 Ivry sur Seine
-Activité spécialisée de design (7410z)
-Siret : 814 634 135 000 10
+- BAM SAS
+  SAS au Capital Social de 6000 €
+  60 rue Jean le Galleu, 94200 Ivry sur Seine
+  Activité spécialisée de design (7410z)
+  Siret : 814 634 135 000 10
 
-**BAM ASSO**
-Association loi 1901
-60 rue Jean le Galleu, 94200 Ivry sur Seine
+- BAM ASSO
+  Association loi 1901
+  60 rue Jean le Galleu, 94200 Ivry sur Seine
 
-## Contact
+### Contact
 (email: contact@collectifbam.fr)
 
-## Licenses
+### Hébergeur
+[OVH](https://www.ovh.com/fr/)
 
-### Contenu
-(image: 88x31.png width:88 height:31 class:no-click)
-Sauf mention contraire les contenus de notre site sont mis sous Licence Creative Commons BY NC SA 3.0. 
-
-Entre autres termes cette licence vous permet de partager et adapter nos oeuvres sous les conditions suivante : Nous créditer, ne pas faire d’usage commercial et partager votre remix sous les mêmes conditions de licence.
-
-### Code
-Le code de notre site est mis sous licence [MIT](https://tldrlegal.com/license/mit-license).
-
-
-### CRÉDITS
+## CRÉDITS
 
 Le design graphique et le web design ont été réalisés par l’équipe du Collectif Bam.
 Le site a été développé par le talentueux [Arnaud Juracek](http://arnaudjuracek.fr/) qu’on aime beaucoup.
 
 Le site a été réalisé avec [Kirby](https://getkirby.com/).
 
+## Licences
 
-### RESSOURCES
+### Contenu
+(image: 88x31.png width:88 height:31 class:no-click)
+Sauf mention contraire les contenus de notre site sont mis sous [Licence Creative Commons BY NC SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/). 
 
-[Github](https://github.com/arnaudjuracek/www-bam)
+Entre d'autres termes cette licence vous permet de partager et adapter nos oeuvres sous les conditions suivante : Nous créditer, ne pas faire d’usage commercial et partager votre remix sous les mêmes conditions de licence.
 
-### HÉBERGEUR
+### Code
+Le code de notre site est mis sous licence [MIT](https://tldrlegal.com/license/mit-license). 
+En d'autres termes vous pouvez le modifier et l'utiliser à des fins personnelles ou commerciales en créditant l'auteur et utilisant la même licence.
 
-OVH
+## RESSOURCES
+
+Le code du site est disponible sur [Github](https://github.com/arnaudjuracek/www-bam)

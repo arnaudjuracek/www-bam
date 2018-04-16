@@ -5,17 +5,21 @@ const defaultOpts = {
   selector: '.footnotes li',
   backrefNotation: 'fnref-%v',
   offy: 0,
-  margin: 10,
+  margin: 10
 }
 
 export default function (opts) {
   opts = Object.assign({}, defaultOpts, opts || {})
 
-  const footnotes = document.querySelectorAll(opts.selector)
+  let footnotes = document.querySelectorAll(opts.selector)
+
+  if (!footnotes || !footnotes.length) return
+  if (!footnotes.forEach) footnotes = [...footnotes]
+
   footnotes.forEach(el => el.classList.add('is-loading'))
 
   window.addEventListener('load', calc)
-  window.addEventListener('resize', () => requestAnimationFrame(calc))
+  window.addEventListener('resize', () => window.requestAnimationFrame(calc))
 
   function calc () {
     const pusher = document.querySelector(opts.pusher)
@@ -46,4 +50,3 @@ export default function (opts) {
     if (footnotesContainerHeight > main.clientHeight) main.style.minHeight = footnotesContainerHeight + 'px'
   }
 }
-
