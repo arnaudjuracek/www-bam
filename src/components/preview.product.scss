@@ -81,6 +81,8 @@
 
       .preview-product-cover {
         border: none;
+        width: 100%;
+        margin-bottom: 1rem;
         &::before { display: none; }
         .preview-product-cover-content {
           position: relative;
