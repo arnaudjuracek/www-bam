@@ -67,3 +67,8 @@ $breakpoints: (
 @import 'components/preview.job';
 @import 'components/contact';
 @import 'sass/layout';
+
+
+body[data-category='ecosysteme'] .sidebar-meta:nth-child(2) {
+  font-weight: normal;
+}
