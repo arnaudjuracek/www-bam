@@ -1,10 +1,4 @@
 <ul class="social-links">
-  <li class="social-link <?php ecco(page('contact')->isOpen() || page('contact')->isActive() , 'is-active') ?>">
-    <a href="<?php echo page('contact')->url() ?>">
-      <?php snippet('icons/contact_fill') ?>
-    </a>
-  </li>
-
   <?php if ($site->twitter()->isNotEmpty()): ?>
     <li class="social-link">
       <a href="<?php echo $site->twitter()->url() ?>">
@@ -17,6 +11,14 @@
     <li class="social-link">
       <a href="<?php echo $site->instagram()->url() ?>">
         <?php snippet('icons/instagram_fill') ?>
+      </a>
+    </li>
+  <?php endif ?>
+
+  <?php if ($site->medium()->isNotEmpty()): ?>
+    <li class="social-link">
+      <a href="<?php echo $site->medium()->url() ?>">
+        <?php snippet('icons/medium') ?>
       </a>
     </li>
   <?php endif ?>
@@ -36,5 +38,4 @@
       </a>
     </li>
   <?php endif ?>
-
 </ul>

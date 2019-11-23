@@ -14,7 +14,7 @@ Linkedin: https://www.linkedin.com/company/collectif-bam
 
 ----
 
-Description: Le Collectif Bam est un collectif de design engagé sur la révolution numérique et la transition écologique.
+Description: Le Collectif Bam est un collectif et studio de design engagé sur la révolution numérique et la transition écologique.
 
 ----
 
@@ -31,3 +31,7 @@ Footer: **Collectif Bam** – Sauf mention contraire les contenus sont mis sous 
 ----
 
 Instagram: https://www.instagram.com/collectifbam/
+
+----
+
+Medium: https://medium.com/collectifbam

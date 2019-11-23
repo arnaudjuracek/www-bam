@@ -36,6 +36,13 @@ fields:
     width: 1/2
     placeholder: https://linkedin.com/in/account
 
+  medium:
+    label: Medium
+    type: url
+    icon: globe
+    width: 1/2
+    placeholder: https://medium.com/account
+
   description:
     label: Description
     type: textarea
