@@ -20,8 +20,6 @@
       width: 33.33%;
 
       img {
-        @include easing(300ms, filter);
-        @media (min-width: breakpoint(tablet)) { filter: grayscale(1); }
         width: 100%;
         height: auto;
       }
@@ -69,8 +67,6 @@
       }
     }
   }
-
-  &:hover img { filter: none!important; }
 }
 
 

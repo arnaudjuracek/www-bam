@@ -16,11 +16,6 @@
     @include easing(300ms, outline-color);
     &:hover {
       @include themable(outline-color);
-      .preview-project-cover {
-        img {
-          filter: none !important;
-        }
-      }
     }
   }
 
@@ -32,8 +27,6 @@
     .preview-project-cover {
       width: 100%;
       img {
-        @include easing(300ms, filter);
-        @media (min-width: breakpoint(tablet)) { filter: grayscale(1); }
         width: 100%;
         height: auto;
       }
