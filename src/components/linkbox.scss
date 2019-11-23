@@ -22,11 +22,14 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 
-  opacity: 0.6;
-  @include easing(300ms, opacity);
+  @include easing(300ms);
   &:hover,
   &.is-selected,
-  &.is-active { opacity: 1; }
+  &.is-active {
+    @include themable(color);
+    border-color: color(background);
+    background: color(background);
+  }
 
   &::before {
     content: '';
