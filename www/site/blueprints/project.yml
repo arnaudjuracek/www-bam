@@ -21,10 +21,11 @@ pages:
 
 files:
   fields:
-    focus:
-      label: Point de focus
-      type: focus
-
+    caption:
+      label: Légende
+      type: markdown
+      tools:
+        - link
 fields:
   previewfiles:
     type: previewfiles

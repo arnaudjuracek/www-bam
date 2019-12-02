@@ -53,6 +53,20 @@ figure {
   }
 }
 
+.figure-wrapper {
+  margin-bottom: 1em;
+  figure { margin-bottom: 0 !important; }
+  figcaption {
+    padding: 1em 1rem 0 1rem;
+    color: color(gray);
+
+    &, p {
+      font-size: 1.4rem;
+      line-height: 1.4em;
+    }
+  }
+}
+
 
 main {
   a {

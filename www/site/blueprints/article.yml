@@ -12,6 +12,12 @@ options:
 pages: false
 files:
   fields:
+    caption:
+      label: Légende
+      type: markdown
+      tools:
+        - link
+
     focus:
       label: Point de focus
       type: focus

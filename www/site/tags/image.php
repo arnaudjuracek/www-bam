@@ -93,9 +93,16 @@ kirbytext::$tags['image'] = [
     $figure->addClass($tag->attr('class'));
     $figure->append($image);
     $figure->append($noscript);
+
+    if (empty($caption)) $caption = $file->caption()->kirbytext();
     if (!empty($caption)) {
-      $figure->append('<figcaption>' . html($caption) . '</figcaption>');
+      $wrapper = new Brick('div');
+      $wrapper->addClass('figure-wrapper');
+      $wrapper->append($figure);
+      $wrapper->append('<figcaption>' . $caption . '</figcaption>');
+      $figure = $wrapper;
     }
+
     return $figure;
   }
 ];
