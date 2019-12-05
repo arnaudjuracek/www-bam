@@ -82,6 +82,7 @@ $timeline: (
     animation: fallIn #{duration(hometext)}ms ease forwards;
     animation-delay: #{delay(hometext)}ms;
 
+    font-size: 1.6rem;
     line-height: 1.2;
     font-weight: normal;
     font-style: italic;
