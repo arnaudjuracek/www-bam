@@ -1,3 +1,6 @@
+Redirect 301 /collectif-bam https://collectifbam.fr/philosophie
+Redirect 301 /collectif-bam/ https://collectifbam.fr/philosophie/
+
 # Kirby .htaccess
 
 # rewrite rules
@@ -30,9 +33,6 @@ RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
 #RewriteCond $1 !^plugins/[a-zA-Z0-9\.\-_%=]+/assets/.*
 RewriteRule ^site/(.*) index.php [L]
 
-# block backups from being accessed directly
-RewriteRule ^content/backups/(.*)$ index.php [L]
-
 # block direct access to kirby and the panel sources
 RewriteRule ^(kirby|panel\/app|panel\/tests)/(.*) index.php [L]
 
@@ -51,6 +51,17 @@ RewriteRule ^(.*) index.php [L]
 # Additional recommended values
 # Remove comments for those you want to use.
 #
-# AddDefaultCharset UTF-8
+AddDefaultCharset UTF-8
 #
 # php_flag short_open_tag on
+
+RedirectPermanent /project/blockchain-corvee-de-vaisselle/ /projets/realisations/blockchain-vaisselle/
+RedirectPermanent /project/phyviz/ /projets/realisations/phyviz/
+RedirectPermanent /project/de-la-cuisine-a-la-cuisine/ /projets/realisations/cuisine-low-tech/
+RedirectPermanent /project/mobil-ier-dexposition-01/ /projets/realisations/mobil-ier-d-exposition/
+RedirectPermanent /project/cookieviz-datafiction/ /projets/realisations/datafiction/
+RedirectPermanent /project/ /projets/realisations/
+RedirectPermanent /equipe/ /ecosysteme/collectif/
+RedirectPermanent /project/biceps-cultivatus/ /projets/realisations/cuisine-low-tech/
+RedirectPermanent /projets/realisations/ples/ /projets/realisations/vrap/
+RedirectPermanent http://collectifbam.fr/project/biceps-cultivatus/ https://www.collectifbam.fr/projets/realisations/cuisine-low-tech/

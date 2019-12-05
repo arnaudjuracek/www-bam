@@ -5,7 +5,7 @@
 
   <div class="splashscreen-wrapper">
     <div class="splashscreen-logo">
-      <a href="<?php echo page('collectif-bam')->url() ?>">
+      <a href="<?php echo page('philosophie')->url() ?>">
         <img src="<?php echo $kirby->urls()->assets() ?>/images/logo-full.svg">
       </a>
     </div>
