@@ -58,7 +58,7 @@ fields:
     help: Ces mots-clefs sont utilisés par les moteurs de recherche
 
   hometext:
-    label: Texte sur le page d’accueil
+    label: Texte sur la page d’accueil
     type: markdown
 
   footer:

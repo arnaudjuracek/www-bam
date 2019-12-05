@@ -29,21 +29,21 @@ c::set([
   'error'                      => 'erreur',
   'cache.ignore'               => 'sitemap',
   'routes' => [
-    array(
-      // Redirect all top pages (except events and sandbox) to their first child
-      'pattern' => '(:any)',
-      'action'  => function ($uid) {
-        if ($topPage = page($uid)) {
-          $page = $topPage->children()->visible()->first();
-          if (!$page || $uid == 'evenements' || $uid == 'bac-a-sable') {
-            site()->visit($topPage);
-            return $topPage;
-          }
+    // array(
+    //   // Redirect all top pages (except events and sandbox) to their first child
+    //   'pattern' => '(:any)',
+    //   'action'  => function ($uid) {
+    //     if ($topPage = page($uid)) {
+    //       $page = $topPage->children()->visible()->first();
+    //       if (!$page || $uid == 'evenements' || $uid == 'bac-a-sable') {
+    //         site()->visit($topPage);
+    //         return $topPage;
+    //       }
 
-          go($page->url());
-        } else go('erreur');
-      }
-    ),
+    //       go($page->url());
+    //     } else go('erreur');
+    //   }
+    // ),
     array(
       // Force project redirection to their first child
       'pattern' => 'projets/(:any)/(:any)',
