@@ -9,7 +9,10 @@ $colors: (
 
 // these keys are top-pages' UID
 $brand-colors: (
+  // NOTE: collectif-bam and philosophie refer to the same page ; this is mainly
+  // duplicated for retro-compatility
   collectif-bam: (#FF4825, #D14627),
+  philosophie: (#FF4825, #D14627),
   ecosysteme: (#FFC53D, #ECA918),
   produits: (#D40058, #960148),
   contact: (#8A8A8D, #646569),
