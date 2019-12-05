@@ -57,6 +57,10 @@ fields:
     type: tags
     help: Ces mots-clefs sont utilisés par les moteurs de recherche
 
+  hometext:
+    label: Texte sur le page d’accueil
+    type: markdown
+
   footer:
     extends: markdown
     label: Pied de page

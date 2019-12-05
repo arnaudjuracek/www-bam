@@ -1,7 +1,8 @@
 $timeline: (
   icons: (0, 600),
   link: (0, 300),
-  baseline: (600, 900),
+  baseline: (300, 900),
+  hometext: (300, 900),
   footer: (900, 300)
 );
 
@@ -36,23 +37,26 @@ $timeline: (
     }
   }
 
-  .splashscreen-logo {
+  .splashscreen-wrapper {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-    $size: 10vmax;
-    top: calc(45% - #{$size / 2});
-    left: calc(50% - #{$size / 2});
-    width: $size;
+    top: 15rem;
+    left: 10%;
+    right: 10%;
+    bottom: 15rem;
+  }
 
-    @media (max-width: breakpoint(phone)) {
-      $size: 30vmax;
-      top: calc(45% - #{$size / 2});
-      left: calc(50% - #{$size / 2});
-      width: $size;
-    }
-
-    height: auto;
+  .splashscreen-logo {
     line-height: 0;
+    width: 20vmax;
+    @media (max-width: breakpoint(phone)) {
+      width: 30vmax;
+    }
 
     img {
       width: 100%;
@@ -62,24 +66,25 @@ $timeline: (
 
   .splashscreen-baseline {
     opacity: 0;
-
     animation: fallIn #{duration(baseline)}ms ease forwards;
     animation-delay: #{delay(baseline)}ms;
 
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin: 0 auto;
-    bottom: 20%;
-
-    @media (max-width: breakpoint(phone)) {
-      bottom: calc(50% - 20vmax);
-    }
-
     font-size: 1.6rem;
+    line-height: 1.2;
     font-weight: bold;
     text-transform: uppercase;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .splashscreen-hometext {
+    opacity: 0;
+    animation: fallIn #{duration(hometext)}ms ease forwards;
+    animation-delay: #{delay(hometext)}ms;
+
+    line-height: 1.2;
+    font-weight: normal;
+    font-style: italic;
   }
 
   footer.splashscreen-footer {
