@@ -2,9 +2,14 @@
   position: relative;
 
   display: block;
-  border: 1px solid;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
 
-  padding: 0.5rem 0;
+  border: 1px solid;
+  padding: 5px 0;
+
+  min-height: 1.2em;
   padding-left: calc(4px + 1.5ch);
 
   color: inherit;
@@ -12,15 +17,17 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.6rem;
-  line-height: 1.2em;
+  line-height: 1.2 * 1.6rem;
+
+  vertical-align: top;
 
   max-height: 1.6rem * 2 + 0.5 * 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
 
-  // display: -webkit-box;
-  // -webkit-line-clamp: 2;
-  // -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 
   @include easing(300ms);
   &:hover,
