@@ -6,7 +6,7 @@
   <ul class="grid-items">
     <?php
       // NOTE: an archive is an event with at least one visible child
-      $param = param('archives', false);
+      $param = param('restitutions', false);
       $events = $param
         ? $page
           ->children()

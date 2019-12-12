@@ -15,8 +15,8 @@
       ->pluck('tags', ',', true);
     foreach ($tags as $tag) {
       $filters[$tag] = [
-        'url' => url_param(['archives' => str::slug($tag)], $page),
-        'isActive' => param('archives') == str::slug($tag) || param('archives') == 'tout'
+        'url' => url_param(['restitutions' => str::slug($tag)], $page),
+        'isActive' => param('restitutions') == str::slug($tag) || param('restitutions') == 'tout'
       ];
     }
 
@@ -24,11 +24,11 @@
       'filters' => [
         'calendrier' => [
           'url' => $page->url(),
-          'isActive' => !param('archives', false)
+          'isActive' => !param('restitutions', false)
         ],
-        'archives' => [
-          'url' => url_param(['archives' => 'tout'], $page),
-          'isActive' => param('archives', false),
+        'restitutions' => [
+          'url' => url_param(['restitutions' => 'tout'], $page),
+          'isActive' => param('restitutions', false),
           'children' => $filters
         ]
       ]
