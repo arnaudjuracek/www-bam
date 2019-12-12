@@ -1,4 +1,5 @@
-<svg id="Layer_1" width="150" height="150" viewBox="0 0 150 150">
-    <path id="XMLID_2_" class="st0" d="M1 1h148v148H1z"/>
-    <path id="XMLID_1_" class="st0" d="M1 1l74 74 74-74"/>
+<svg id="tracé_noir" data-name="tracé noir" viewBox="0 0 144.57 144.57">
+  <path class="cls-1" d="M15.77 29.78V1.48h127.26v113.56h-14.41M115.28 29.36l27.75-27.88M15.77 1.48l27.65 28M143.03 115.04l-14.24-14.21"/>
+  <path class="cls-1" d="M1.42 29.65h127.27v113.56H1.42z"/>
+  <path class="cls-1" d="M1.42 29.65l63.46 64.04 63.81-64.04M58.33 86.06L1.42 143.22M128.68 143.22L71.95 86.53"/>
 </svg>
