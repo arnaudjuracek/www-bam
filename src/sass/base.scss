@@ -57,7 +57,8 @@ figure {
   margin-bottom: 1em;
   figure { margin-bottom: 0 !important; }
   figcaption {
-    padding: 1em 1rem 0 1rem;
+    padding: 0.5em 1rem 0 1rem;
+    text-align: center;
     color: color(gray);
 
     &, p {
