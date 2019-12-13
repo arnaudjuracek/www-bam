@@ -20,7 +20,7 @@
           <?php if ($item->is($site->find('evenements'))): ?>
             <?php foreach ([
               "Calendrier" => $item->url(),
-              "Archives" => $item->url() . '/archives:tout',
+              "Restitutions" => $item->url() . '/restitutions:tout',
             ] as $title => $url) : ?>
               <li class="internal-navigation-link"><a class="linkbox" href="<?php echo $url ?>"><?php echo $title ?></a></li>
             <?php endforeach ?>
